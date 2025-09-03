@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,7 +11,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-[var(--color-bg)]">
         <Header />
-        <main>
+        <main className="pt-24 md:pt-28">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />

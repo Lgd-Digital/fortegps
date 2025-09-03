@@ -20,9 +20,31 @@ const Header: React.FC = () => {
   const whatsappUrl = "https://wa.me/5585999999999?text=Olá%2C%20quero%20saber%20mais%20sobre%20rastreamento%20de%20veículos";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg-soft)] backdrop-blur-sm border-b border-[var(--color-border)] shadow-sm">
-      <div className="container">
-        <div className="flex items-center justify-between h-16 md:h-20">
+    <>
+      {/* Top Bar */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-brand)] text-white text-sm">
+        <div className="container">
+          <div className="flex items-center justify-between py-2">
+            <div className="hover:text-[var(--color-text-beige)] cursor-pointer text-xs md:text-sm items-center space-x-6">
+              <a href="https://portal.fortegps.com.br" target="_blank" rel="noopener noreferrer" className="text-white">Portal do Cliente</a>
+            </div>
+            <div className="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm">
+              <a href="tel:08006068153" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
+                0800 606 8153
+              </a>
+              <span className="hidden md:inline text-white">|</span>
+              <a href="tel:85934846006" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
+                (85) 3484 6006
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Main Header */}
+      <header className="fixed top-8 md:top-9 left-0 right-0 z-50 bg-[var(--color-bg-soft)] backdrop-blur-sm border-b border-[var(--color-border)] shadow-sm">
+        <div className="container">
+          <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img src="/logo.png" alt="ForteGPS" className="w-auto h-40" />
@@ -108,6 +130,7 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
     </header>
+    </>
   );
 };
 
