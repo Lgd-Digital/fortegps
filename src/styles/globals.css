@@ -4,12 +4,12 @@
 
 @theme {
   --color-brand: #6CB33F;
-  --color-bg: #0B0B0B;
+  --color-bg: #F8FAFC;
   --color-bg-soft: #111418;
   --color-bg-muted: #1F242B;
-  --color-text: #FFFFFF;
-  --color-text-muted: #E6E8EB;
-  --color-border: #1F242B;
+  --color-text: #1E293B;
+  --color-text-muted: #64748B;
+  --color-border: #E2E8F0;
   
   --font-family-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   

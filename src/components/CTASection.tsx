@@ -37,7 +37,7 @@ const CTASection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-[var(--color-bg-soft)] overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-[var(--color-bg)] overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brand)]/5 via-transparent to-[var(--color-brand)]/5"></div>
       

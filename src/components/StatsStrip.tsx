@@ -48,10 +48,10 @@ const StatsStrip: React.FC = () => {
               <div className="text-3xl md:text-4xl font-bold text-[var(--color-brand)] mb-1">
                 {stat.value}
               </div>
-              <div className="text-sm font-semibold text-[var(--color-text)] mb-1">
+              <div className="text-sm font-semibold text-[var(--color-text-beige)] mb-1">
                 {stat.label}
               </div>
-              <div className="text-xs text-[var(--color-text-muted)]">
+              <div className="text-xs text-[var(--color-text-beige)]">
                 {stat.description}
               </div>
             </motion.div>

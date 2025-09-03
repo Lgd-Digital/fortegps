@@ -43,7 +43,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
-      className="bg-[var(--color-bg-soft)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] hover:border-[var(--color-brand)]/30 transition-all duration-300 group"
+      className="bg-[var(--color-bg)] p-6 rounded-md border border-[var(--color-border)] hover:border-[var(--color-brand)]/30 transition-all duration-300 group"
     >
       <div className="w-12 h-12 bg-[var(--color-brand)]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[var(--color-brand)]/20 transition-colors">
         <IconComponent size={24} className="text-[var(--color-brand)]" />

@@ -5,12 +5,13 @@
 @layer base {
   :root {
     --color-brand: #6CB33F;
-    --color-bg: #0B0B0B;
+    --color-bg: #F8FAFC;
     --color-bg-soft: #111418;
     --color-bg-muted: #1F242B;
-    --color-text: #FFFFFF;
-    --color-text-muted: #E6E8EB;
-    --color-border: #1F242B;
+    --color-text: #1E293B;
+    --color-text-muted: #64748B;
+    --color-border: #E2E8F0;
+    --color-text-beige: #c8c3c3;
   }
   
   body {

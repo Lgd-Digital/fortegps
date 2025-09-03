@@ -54,10 +54,10 @@ const Servicos: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Benefícios Inclusos
               </h2>
-              <p className="text-lg text-[var(--color-text-muted)]">
+              <p className="text-lg text-[var(--color-text-beige)]">
                 Tudo que você precisa já está incluso no seu plano
               </p>
             </motion.div>
@@ -83,7 +83,7 @@ const Servicos: React.FC = () => {
                   <div className="w-6 h-6 bg-[var(--color-brand)] rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle size={16} className="text-white" />
                   </div>
-                  <span className="text-[var(--color-text-muted)]">{benefit}</span>
+                  <span className="text-[var(--color-text-beige)]">{benefit}</span>
                 </motion.div>
               ))}
             </div>

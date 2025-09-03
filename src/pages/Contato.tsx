@@ -70,7 +70,7 @@ const Contato: React.FC = () => {
                 <div className="w-12 h-12 bg-[var(--color-brand)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <info.icon size={24} className="text-[var(--color-brand)]" />
                 </div>
-                <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
+                <h3 className="text-lg font-semibold text-[var(--color-text-beige)] mb-2">
                   {info.title}
                 </h3>
                 {info.link ? (
@@ -83,7 +83,7 @@ const Contato: React.FC = () => {
                     {info.value}
                   </a>
                 ) : (
-                  <p className="text-[var(--color-text-muted)] text-sm">
+                    <p className="text-[var(--color-text-beige)] text-sm">
                     {info.value}
                   </p>
                 )}
@@ -108,14 +108,14 @@ const Contato: React.FC = () => {
                   <div className="text-center">
                     <MapPin size={48} className="text-[var(--color-brand)] mx-auto mb-2" />
                     <p className="text-[var(--color-text-muted)]">Mapa da Região Metropolitana</p>
-                    <p className="text-sm text-[var(--color-text-muted)] opacity-70">Fortaleza e região</p>
+                    <p className="text-sm text-[var(--color-text-beige)] opacity-70">Fortaleza e região</p>
                   </div>
                 </div>
                 <div className="text-center">
-                  <h4 className="font-semibold text-[var(--color-text)] mb-2">
+                  <h4 className="font-semibold text-[var(--color-text-beige)] mb-2">
                     Cobertura Completa
                   </h4>
-                  <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  <p className="text-sm text-[var(--color-text-beige)] leading-relaxed">
                     Atendemos toda a região metropolitana de Fortaleza com instalação 
                     e suporte técnico especializado.
                   </p>
@@ -124,7 +124,7 @@ const Contato: React.FC = () => {
 
               {/* Quick Contact */}
               <div className="bg-[var(--color-bg-soft)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)]">
-                <h4 className="font-semibold text-[var(--color-text)] mb-4">
+                <h4 className="font-semibold text-[var(--color-text-beige)] mb-4">
                   Prefere falar diretamente?
                 </h4>
                 <div className="space-y-3">
@@ -139,7 +139,7 @@ const Contato: React.FC = () => {
                   </a>
                   <a
                     href="tel:+5585999999999"
-                    className="flex items-center space-x-2 text-[var(--color-text-muted)] hover:text-[var(--color-brand)] transition-colors"
+                    className="flex items-center space-x-2 text-[var(--color-text-beige)] hover:text-[var(--color-brand)] transition-colors"
                   >
                     <Phone size={18} />
                     <span>Ligação: (85) 99999-9999</span>

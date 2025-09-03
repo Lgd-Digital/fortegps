@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'Sobre', path: '/sobre' },
-    { label: 'Serviços', path: '/servicos' },
+    { label: 'Planos', path: '/planos' },
     { label: 'Contato', path: '/contato' }
   ];
 
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   const whatsappUrl = "https://wa.me/5585999999999?text=Olá%2C%20quero%20saber%20mais%20sobre%20rastreamento%20de%20veículos";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)]/95 backdrop-blur-sm border-b border-[var(--color-border)]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg-soft)] backdrop-blur-sm border-b border-[var(--color-border)] shadow-sm">
       <div className="container">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
                 className={`text-sm font-medium transition-colors hover:text-[var(--color-brand)] ${
                   isActive(item.path) 
                     ? 'text-[var(--color-brand)]' 
-                    : 'text-[var(--color-text-muted)]'
+                    : 'text-white'
                 }`}
               >
                 {item.label}

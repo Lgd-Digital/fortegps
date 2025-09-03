@@ -40,14 +40,14 @@ const ContactForm: React.FC = () => {
       transition={{ duration: 0.8 }}
       className="bg-[var(--color-bg-soft)] p-8 rounded-[var(--radius-card)] border border-[var(--color-border)]"
     >
-      <h3 className="text-2xl font-bold text-[var(--color-text)] mb-6">
+      <h3 className="text-2xl font-bold text-white mb-6">
         Entre em Contato
       </h3>
       
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-[var(--color-text)] mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-[var(--color-text-beige)] mb-2">
               Nome Completo *
             </label>
             <input
@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
           </div>
           
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-[var(--color-text)] mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-[var(--color-text-beige)] mb-2">
               WhatsApp *
             </label>
             <input
@@ -81,7 +81,7 @@ const ContactForm: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-[var(--color-text)] mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-[var(--color-text-beige)] mb-2">
               E-mail
             </label>
             <input
@@ -96,7 +96,7 @@ const ContactForm: React.FC = () => {
           </div>
           
           <div>
-            <label htmlFor="vehicleType" className="block text-sm font-medium text-[var(--color-text)] mb-2">
+            <label htmlFor="vehicleType" className="block text-sm font-medium text-[var(--color-text-beige)] mb-2">
               Tipo de Veículo *
             </label>
             <select
@@ -118,7 +118,7 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-[var(--color-text)] mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-[var(--color-text-beige)] mb-2">
             Mensagem
           </label>
           <textarea

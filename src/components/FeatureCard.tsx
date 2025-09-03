@@ -16,7 +16,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, descriptio
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
-      className="bg-[var(--color-bg-soft)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] hover:border-[var(--color-brand)]/30 transition-all duration-300"
+      className="bg-[var(--color-bg)] p-6 rounded-md border border-[var(--color-border)] hover:border-[var(--color-brand)]/30 transition-all duration-300"
     >
       <div className="w-12 h-12 bg-[var(--color-brand)]/10 rounded-lg flex items-center justify-center mb-4">
         <Icon size={24} className="text-[var(--color-brand)]" />
