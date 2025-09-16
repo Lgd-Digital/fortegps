@@ -26,7 +26,7 @@ const Sobre: React.FC = () => {
     {
       icon: Users,
       title: 'Atendimento Humanizado',
-      description: 'Equipe local que conhece a realidade cearense e oferece suporte personalizado quando você mais precisa.'
+      description: 'Tratamos cada cliente com empatia, respeito e proximidade, oferecendo suporte ágil e soluções personalizadas que colocam pessoas em primeiro lugar.'
     },
     {
       icon: Award,
@@ -36,7 +36,7 @@ const Sobre: React.FC = () => {
     {
       icon: Clock,
       title: 'Suporte Imediato',
-      description: 'Central de atendimento 24 horas com técnicos especializados prontos para ajudar em qualquer situação.'
+      description: 'Central de atendimento 24 horas com uma equipe especializada pronta para ajudar em qualquer situação.'
     },
     {
       icon: Shield,
@@ -69,10 +69,12 @@ const Sobre: React.FC = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission, Vision, Values and Stats Section */}
       <section className="py-16 bg-[var(--color-bg-section)]">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Mission and Vision Row */}
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+            {/* Mission */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -81,41 +83,132 @@ const Sobre: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-6">
                 Nossa Missão
               </h2>
-              <p className="text-lg text-[var(--color-text-muted)] leading-relaxed mb-6">
-                Proteger o que é importante para você através de tecnologia avançada e suporte humano. 
-                Acreditamos que a segurança do seu veículo deve vir acompanhada de tranquilidade, 
-                não de complicações.
-              </p>
               <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-                Por isso, desenvolvemos soluções simples, eficazes e acessíveis, sempre com foco 
-                na experiência do usuário e no atendimento de qualidade.
+                Nossa missão é proporcionar segurança com qualidade, aliando tecnologia
+                avançada a soluções eficazes, sempre com um suporte humanizado que garante
+                tranquilidade, confiança e bem-estar a nossos clientes e parceiros.
               </p>
             </motion.div>
 
+            {/* Vision */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 gap-6"
+              transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
-                <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">+5.000</div>
-                <p className="text-sm text-[var(--color-text-muted)]">Veículos Protegidos</p>
-              </div>
-              <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
-                <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">5+</div>
-                <p className="text-sm text-[var(--color-text-muted)]">Anos de Experiência</p>
-              </div>
-              <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
-                <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">24h</div>
-                <p className="text-sm text-[var(--color-text-muted)]">Suporte Ativo</p>
-              </div>
-              <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
-                <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">98%</div>
-                <p className="text-sm text-[var(--color-text-muted)]">Satisfação</p>
-              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-6">
+                Nossa Visão
+              </h2>
+              <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
+                Ser referência nacional em tecnologia de rastreamento e gestão inteligente de frotas e patrimônios, 
+                reconhecida pela excelência, inovação e confiança.
+              </p>
             </motion.div>
           </div>
+
+          {/* Stats Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          >
+            <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
+              <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">+10.000</div>
+              <p className="text-sm text-[var(--color-text-muted)]">Veículos Protegidos</p>
+            </div>
+            <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
+              <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">14+</div>
+              <p className="text-sm text-[var(--color-text-muted)]">Anos de Experiência</p>
+            </div>
+            <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
+              <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">24h</div>
+              <p className="text-sm text-[var(--color-text-muted)]">Suporte Ativo</p>
+            </div>
+            <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
+              <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">98%</div>
+              <p className="text-sm text-[var(--color-text-muted)]">Satisfação</p>
+            </div>
+          </motion.div>
+
+          {/* Values Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-8 text-center">
+              Nossos Valores
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-lg border border-[var(--color-border)] shadow-sm">
+                <div className="flex items-start space-x-3">
+                  <div className="w-3 h-3 bg-[var(--color-brand)] rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-[var(--color-text)] mb-2">Segurança em primeiro lugar</h4>
+                    <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+                      Garantimos a proteção de veículos, clientes e parceiros com máxima confiabilidade.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-lg border border-[var(--color-border)] shadow-sm">
+                <div className="flex items-start space-x-3">
+                  <div className="w-3 h-3 bg-[var(--color-brand)] rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-[var(--color-text)] mb-2">Inovação contínua</h4>
+                    <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+                      Evoluímos com a tecnologia para oferecer soluções modernas e eficientes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-lg border border-[var(--color-border)] shadow-sm">
+                <div className="flex items-start space-x-3">
+                  <div className="w-3 h-3 bg-[var(--color-brand)] rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-[var(--color-text)] mb-2">Transparência</h4>
+                    <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+                      Atuamos com ética, clareza e responsabilidade em todas as relações.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-lg border border-[var(--color-border)] shadow-sm">
+                <div className="flex items-start space-x-3">
+                  <div className="w-3 h-3 bg-[var(--color-brand)] rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-[var(--color-text)] mb-2">Excelência no atendimento</h4>
+                    <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+                      Prestamos suporte humanizado, ágil e de qualidade.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-lg border border-[var(--color-border)] shadow-sm">
+                <div className="flex items-start space-x-3">
+                  <div className="w-3 h-3 bg-[var(--color-brand)] rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-[var(--color-text)] mb-2">Confiança e credibilidade</h4>
+                    <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+                      Construímos parcerias sólidas baseadas no respeito e comprometimento.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-lg border border-[var(--color-border)] shadow-sm">
+                <div className="flex items-start space-x-3">
+                  <div className="w-3 h-3 bg-[var(--color-brand)] rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-[var(--color-text)] mb-2">Responsabilidade</h4>
+                    <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+                      Assumimos cada serviço com seriedade, dedicação e foco em resultados.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

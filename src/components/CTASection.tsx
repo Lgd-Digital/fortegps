@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const CTASection: React.FC = () => {
   const benefits = [
@@ -16,8 +17,8 @@ const CTASection: React.FC = () => {
     },
     {
       icon: Users,
-      title: 'Suporte Local',
-      description: 'Equipe cearense sempre disponível'
+      title: 'Suporte 24h',
+      description: 'Equipe especializada sempre disponível'
     }
   ];
 
@@ -63,7 +64,7 @@ const CTASection: React.FC = () => {
             className="inline-flex items-center space-x-2 bg-[var(--color-brand)]/10 text-[var(--color-brand)] px-4 py-2 rounded-full text-sm font-medium mb-6"
           >
             <Shield size={16} />
-            <span>Junte-se a milhares de clientes satisfeitos</span>
+            <span>Junte-se a clientes satisfeitos</span>
           </motion.div>
 
           <motion.h2
@@ -85,8 +86,8 @@ const CTASection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg text-[var(--color-text-muted)] max-w-3xl mx-auto mb-8"
           >
-            Não espere até ser tarde demais. A segurança do seu veículo é nossa prioridade. 
-            Comece hoje mesmo e tenha paz de espírito 24 horas por dia.
+            Não espere até ser tarde demais. A segurança do seu patrimônio é nossa
+            prioridade. Comece hoje mesmo e conte com proteção 24 horas por dia.
           </motion.p>
         </div>
 
@@ -154,13 +155,13 @@ const CTASection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center"
         >
-                      <div className="bg-[var(--color-bg-card)] p-8 md:p-12 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-2xl max-w-4xl mx-auto">
+          <div className="bg-[var(--color-bg-card)] p-8 md:p-12 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-2xl max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-text)] mb-4">
-              Comece sua Proteção Hoje
+              Não entre para a estatística
             </h3>
             <p className="text-[var(--color-text-muted)] mb-6 max-w-2xl mx-auto">
-              Instalação gratuita, suporte 24h e garantia total. 
-              Não há melhor momento para proteger o que é seu.
+              Você sabia que no Estado do Ceará, 28 ou mais veículos são roubados ou furtados por dia?
+              Não perca tempo!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
@@ -170,19 +171,8 @@ const CTASection: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center space-x-2 bg-[var(--color-brand)] text-white px-8 py-4 rounded-[var(--radius-button)] font-semibold text-lg hover:bg-[var(--color-brand)]/90 transition-colors shadow-lg"
               >
-                <span>Falar com Especialista</span>
-                <ArrowRight size={20} />
-              </motion.a>
-              
-              <motion.a
-                href="https://wa.me/5585999999999?text=Quero%20saber%20mais%20sobre%20os%20serviços%20da%20ForteGPS"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 border-2 border-[var(--color-brand)] text-[var(--color-brand)] px-8 py-4 rounded-[var(--radius-button)] font-semibold text-lg hover:bg-[var(--color-brand)] hover:text-white transition-colors"
-              >
-                <span>WhatsApp Direto</span>
+                <span>Falar com Consultor</span>
+                <FaWhatsapp size={20} />
               </motion.a>
             </div>
 
@@ -190,15 +180,15 @@ const CTASection: React.FC = () => {
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-[var(--color-text-muted)]">
               <div className="flex items-center space-x-2">
                 <CheckCircle size={16} className="text-[var(--color-brand)]" />
-                <span>Instalação gratuita</span>
+                <span>Instalação imediata</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle size={16} className="text-[var(--color-brand)]" />
-                <span>Garantia de 1 ano</span>
+                <span>Suporte humanizado 24h</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle size={16} className="text-[var(--color-brand)]" />
-                <span>Suporte técnico 24h</span>
+                <span>Equipe de busca</span>
               </div>
             </div>
           </div>
@@ -215,7 +205,7 @@ const CTASection: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-[var(--color-brand)] mb-2">
-                +5.000
+                +10.000
               </div>
               <div className="text-sm text-[var(--color-text-muted)]">
                 Veículos Protegidos
@@ -239,7 +229,7 @@ const CTASection: React.FC = () => {
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-[var(--color-brand)] mb-2">
-                5 anos
+                14+ anos
               </div>
               <div className="text-sm text-[var(--color-text-muted)]">
                 de Experiência

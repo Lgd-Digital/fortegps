@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, Glasses, ShieldAlert } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                 ))}
               </nav>
 
-                             {/* CTA Button */}
+                {/* CTA Button */}
                <div className="hidden md:flex items-center space-x-4">
                  <button
                    onClick={toggleTheme}
@@ -81,10 +81,10 @@ const Header: React.FC = () => {
                    href={whatsappUrl}
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="flex items-center space-x-2 bg-[var(--color-brand)] text-white px-4 py-2 rounded-[var(--radius-button)] font-medium hover:bg-[var(--color-brand)]/90 transition-colors"
+                  className="flex items-center space-x-2 bg-[var(--color-brand)] text-white px-4 py-2 rounded-[var(--radius-button)] font-medium hover:scale-105 hover:bg-[var(--color-brand)] transition-colors"
                  >
-                   <FaWhatsapp size={16} />
-                   <span>WhatsApp</span>
+                    <ShieldAlert size={20} />
+                   <span>Central de Monitoramento</span>
                  </a>
                </div>
 
