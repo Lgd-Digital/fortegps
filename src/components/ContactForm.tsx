@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-[var(--color-bg-soft)] p-8 rounded-[var(--radius-card)] border border-[var(--color-border)]"
+      className="bg-[var(--color-bg-card)] p-8 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm"
     >
       <h3 className="text-2xl font-bold text-[var(--color-text)] mb-6">
         Entre em Contato

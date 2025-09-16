@@ -45,7 +45,7 @@ const Servicos: React.FC = () => {
       </section>
 
       {/* Additional Benefits */}
-      <section className="py-16 md:py-24 bg-[var(--color-bg-soft)]">
+      <section className="py-16 md:py-24 bg-[var(--color-bg-section)]">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <motion.div

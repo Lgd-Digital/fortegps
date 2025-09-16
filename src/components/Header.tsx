@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   const navItems = [
     { label: 'Home', path: '/' },
@@ -58,7 +60,7 @@ const Header: React.FC = () => {
                     to={item.path}
                     className={`text-sm font-medium transition-colors hover:text-[var(--color-brand)] ${isActive(item.path)
                         ? 'text-[var(--color-brand)]'
-                        : 'text-[var(--color-text-muted)]'
+                        : 'text-[var(--color-text-header)]'
                       }`}
                   >
                     {item.label}
@@ -66,18 +68,25 @@ const Header: React.FC = () => {
                 ))}
               </nav>
 
-              {/* CTA Button */}
-              <div className="hidden md:flex items-center space-x-4">
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 bg-[var(--color-brand)] text-white px-4 py-2 rounded-[var(--radius-button)] font-medium hover:bg-[var(--color-brand)]/90 transition-colors"
-                >
-                  <FaWhatsapp size={16} />
-                  <span>WhatsApp</span>
-                </a>
-              </div>
+                             {/* CTA Button */}
+               <div className="hidden md:flex items-center space-x-4">
+                 <button
+                   onClick={toggleTheme}
+                   className="p-2 text-[var(--color-text-muted)] hover:text-[var(--color-brand)] transition-colors rounded-[var(--radius-button)]"
+                   aria-label="Toggle theme"
+                 >
+                   {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+                 </button>
+                 <a
+                   href={whatsappUrl}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="flex items-center space-x-2 bg-[var(--color-brand)] text-white px-4 py-2 rounded-[var(--radius-button)] font-medium hover:bg-[var(--color-brand)]/90 transition-colors"
+                 >
+                   <FaWhatsapp size={16} />
+                   <span>WhatsApp</span>
+                 </a>
+               </div>
 
               {/* Mobile Menu Button */}
               <button
@@ -113,16 +122,28 @@ const Header: React.FC = () => {
                       {item.label}
                     </Link>
                   ))}
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center space-x-2 bg-[var(--color-brand)] text-white px-4 py-3 rounded-[var(--radius-button)] font-medium w-full justify-center mt-4"
-                  >
-                    <FaWhatsapp size={16} />
-                    <span>Falar no WhatsApp</span>
-                  </a>
+                                     <div className="flex flex-col space-y-3 mt-4">
+                     <button
+                       onClick={() => {
+                         toggleTheme();
+                         setIsMenuOpen(false);
+                       }}
+                       className="flex items-center justify-center space-x-2 border border-[var(--color-border)] text-[var(--color-text-muted)] px-4 py-3 rounded-[var(--radius-button)] font-medium w-full hover:text-[var(--color-brand)] hover:border-[var(--color-brand)] transition-colors"
+                     >
+                       {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
+                       <span>{theme === 'light' ? 'Modo Escuro' : 'Modo Claro'}</span>
+                     </button>
+                     <a
+                       href={whatsappUrl}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       onClick={() => setIsMenuOpen(false)}
+                       className="flex items-center space-x-2 bg-[var(--color-brand)] text-white px-4 py-3 rounded-[var(--radius-button)] font-medium w-full justify-center"
+                     >
+                       <FaWhatsapp size={16} />
+                       <span>Falar no WhatsApp</span>
+                     </a>
+                   </div>
                 </nav>
               </motion.div>
             )}

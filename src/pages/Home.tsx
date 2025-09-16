@@ -123,7 +123,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Featured Services Section */}
-      <section className="py-16 md:py-24 bg-[var(--color-bg-soft)]">
+      <section className="py-16 md:py-24 bg-[var(--color-bg-section)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

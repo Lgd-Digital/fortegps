@@ -4,7 +4,7 @@ import { Shield, MapPin, Smartphone, ArrowRight, Play } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative py-20 md:py-56 overflow-hidden">
+    <section className="relative py-32 md:py-56 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brand)]/5 via-transparent to-[var(--color-brand)]/5"></div>
       
@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
                 </div>
                 
                 {/* Map Preview */}
-                <div className="bg-[var(--color-bg)] rounded p-3 mb-3">
+                <div className="bg-[var(--color-bg-card)] rounded p-3 mb-3">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs text-[var(--color-text)] font-medium">Localização Atual</span>
                     <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full animate-pulse"></div>
@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
                   <div className="bg-[var(--color-brand)]/20 rounded p-2 text-center">
                     <div className="text-xs text-[var(--color-brand)] font-bold">ONLINE</div>
                   </div>
-                  <div className="bg-[var(--color-bg)] rounded p-2 text-center">
+                  <div className="bg-[var(--color-bg-card)] rounded p-2 text-center">
                     <div className="text-xs text-[var(--color-text-muted)]">Bloqueio</div>
                   </div>
                 </div>

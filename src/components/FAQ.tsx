@@ -35,11 +35,11 @@ const FAQ: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-[var(--color-bg-soft)] border border-[var(--color-border)] rounded-[var(--radius-card)] overflow-hidden"
+                className="bg-[var(--color-bg-section)] border border-[var(--color-border)] rounded-[var(--radius-card)] overflow-hidden"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[var(--color-bg-muted)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:ring-offset-[var(--color-bg-soft)]"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[var(--color-bg-section)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:ring-offset-[var(--color-bg-card)]"
                   aria-expanded={openIndex === index}
                 >
                   <span className="text-[var(--color-text)] font-medium pr-4">

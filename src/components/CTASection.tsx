@@ -37,7 +37,7 @@ const CTASection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-[var(--color-bg-soft)] overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-[var(--color-bg-section)] overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brand)]/5 via-transparent to-[var(--color-brand)]/5"></div>
       
@@ -124,7 +124,7 @@ const CTASection: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-[var(--color-bg)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)]"
+              className="bg-[var(--color-bg-card)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm"
             >
               <div className="flex items-center space-x-1 mb-3">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -154,7 +154,7 @@ const CTASection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center"
         >
-          <div className="bg-[var(--color-bg)] p-8 md:p-12 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-2xl max-w-4xl mx-auto">
+                      <div className="bg-[var(--color-bg-card)] p-8 md:p-12 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-2xl max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-text)] mb-4">
               Comece sua Proteção Hoje
             </h3>

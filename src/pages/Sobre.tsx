@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Users, Award, Clock, CheckCircle } from 'lucide-react';
+import { Shield, Users, Award, Clock } from 'lucide-react';
 import CTASection from '../components/CTASection';
 
 const Sobre: React.FC = () => {
@@ -70,7 +70,7 @@ const Sobre: React.FC = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 bg-[var(--color-bg-soft)]">
+      <section className="py-16 bg-[var(--color-bg-section)]">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -98,19 +98,19 @@ const Sobre: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="grid grid-cols-2 gap-6"
             >
-              <div className="bg-[var(--color-bg)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] text-center">
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
                 <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">+5.000</div>
                 <p className="text-sm text-[var(--color-text-muted)]">Veículos Protegidos</p>
               </div>
-              <div className="bg-[var(--color-bg)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] text-center">
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
                 <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">5+</div>
                 <p className="text-sm text-[var(--color-text-muted)]">Anos de Experiência</p>
               </div>
-              <div className="bg-[var(--color-bg)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] text-center">
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
                 <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">24h</div>
                 <p className="text-sm text-[var(--color-text-muted)]">Suporte Ativo</p>
               </div>
-              <div className="bg-[var(--color-bg)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] text-center">
+              <div className="bg-[var(--color-bg-card)] p-6 rounded-md border border-[var(--color-border)] text-center shadow-sm">
                 <div className="text-3xl font-bold text-[var(--color-brand)] mb-2">98%</div>
                 <p className="text-sm text-[var(--color-text-muted)]">Satisfação</p>
               </div>
@@ -166,7 +166,7 @@ const Sobre: React.FC = () => {
       </section>
 
       {/* Differentials Section */}
-      <section className="py-16 md:py-24 bg-[var(--color-bg-soft)]">
+      <section className="py-16 md:py-24 bg-[var(--color-bg-section)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -189,7 +189,7 @@ const Sobre: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-[var(--color-bg)] p-8 rounded-[var(--radius-card)] border border-[var(--color-border)] hover:border-[var(--color-brand)]/30 transition-all duration-300"
+                className="bg-[var(--color-bg-card)] p-8 rounded-[var(--radius-card)] border border-[var(--color-border)] hover:border-[var(--color-brand)]/30 transition-all duration-300 shadow-sm"
               >
                 <div className="w-12 h-12 bg-[var(--color-brand)]/10 rounded-lg flex items-center justify-center mb-4">
                   <item.icon size={24} className="text-[var(--color-brand)]" />
