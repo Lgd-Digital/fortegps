@@ -1,8 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { 
+  Target, 
+  UserCheck, 
+  Calculator, 
+  Headphones as HeadphonesIcon
+} from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { services } from '../data/services';
 import MainCta from '../components/MainCta';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Servicos: React.FC = () => {
   return (
@@ -31,7 +38,7 @@ const Servicos: React.FC = () => {
       {/* Services Grid */}
       <section className="pb-16 md:pb-24">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.slug}
@@ -43,7 +50,318 @@ const Servicos: React.FC = () => {
         </div>
       </section>
 
-      <MainCta />
+      {/* Vehicle Banner Section - Similar to provided image */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-[var(--color-bg-section)] via-[var(--color-bg)] to-[var(--color-bg-section)] overflow-hidden">
+        <div className="container">
+          {/* Header Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-3 leading-tight">
+              Segurança todos os dias com um valor que{' '}
+              <span className="text-[var(--color-brand)]">cabe no seu bolso</span>
+            </h2>
+            <p className="text-lg md:text-xl text-[var(--color-text-muted)] max-w-4xl mx-auto leading-relaxed">
+              Proteção completa para motos, carros e caminhões com tecnologia avançada e preços acessíveis
+            </p>
+          </motion.div>
+
+          {/* Vehicle Composition - Similar to banner layout */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="relative max-w-6xl mx-auto"
+          >
+            {/* Background decorative elements */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--color-brand)]/5 to-transparent rounded-3xl"></div>
+            
+            {/* Vehicles Container */}
+            <div className="relative flex items-center justify-center min-h-[300px] md:min-h-[400px] px-4 py-4">
+              {/* Van/Caminhão - Left */}
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="absolute left-0 md:left-8 z-10"
+              >
+                <div className="relative group">
+                  <img 
+                    src="/fh.png" 
+                    alt="Caminhão" 
+                    className="h-32 md:h-48 w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[var(--color-bg-card)] px-3 py-1 rounded-full border border-[var(--color-border)] shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-xs font-medium text-[var(--color-text)]">Caminhões</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Carro - Center (Destaque) */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="relative z-20 mx-4"
+              >
+                <div className="relative group">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-[var(--color-brand)]/20 via-[var(--color-brand)]/10 to-[var(--color-brand)]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <img 
+                    src="/vw.png" 
+                    alt="Carro" 
+                    className="relative h-40 md:h-56 w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-[var(--color-brand)] text-white px-4 py-2 rounded-full shadow-xl">
+                    <span className="text-sm font-semibold">Carros</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Moto - Right */}
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.9 }}
+                className="absolute right-0 md:right-8 z-10"
+              >
+                <div className="relative group">
+                  <img 
+                    src="/moto.png" 
+                    alt="Moto" 
+                    className="h-32 md:h-48 w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[var(--color-bg-card)] px-3 py-1 rounded-full border border-[var(--color-border)] shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-xs font-medium text-[var(--color-text)]">Motos</span>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Features Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 1.1 }}
+            className="grid md:grid-cols-3 gap-6 mt-6"
+          >
+            {[
+              {
+                title: 'Caminhões',
+                description: 'Gestão profissional de frotas',
+                features: ['Monitoramento de carga', 'Relatórios detalhados'],
+              },
+              {
+                title: 'Carros',
+                description: 'Proteção completa para veículos',
+                features: ['Bloqueio remoto', 'Cerca virtual'],
+              },
+              {
+                title: 'Motos',
+                description: 'Rastreamento discreto e eficiente',
+                features: ['Dispositivo compacto', 'Resistente à água'],
+              },
+            ].map((vehicle, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="bg-[var(--color-bg-card)] p-5 rounded-2xl border border-[var(--color-border)] hover:border-[var(--color-brand)]/30 transition-all duration-300 hover:shadow-lg">
+                  <h3 className="text-xl font-bold text-[var(--color-text)] mb-2 group-hover:text-[var(--color-brand)] transition-colors">
+                    {vehicle.title}
+                  </h3>
+                  <p className="text-[var(--color-text-muted)] mb-3">
+                    {vehicle.description}
+                  </p>
+                  <ul className="space-y-1">
+                    {vehicle.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center justify-center text-sm text-[var(--color-text-muted)]">
+                        <div className="w-1.5 h-1.5 bg-[var(--color-brand)] rounded-full mr-2 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Custom Plan CTA */}
+      <section className="relative py-20 md:py-24 bg-gradient-to-br from-[var(--color-bg-section)] via-[var(--color-bg)] to-[var(--color-bg-section)] overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-brand)]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-brand)]/3 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-brand)]/2 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container relative z-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Header Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-[var(--color-brand)] to-[var(--color-brand)]/70 rounded-2xl mb-8 shadow-2xl"
+              >
+                <Target size={40} className="text-white" />
+              </motion.div>
+              
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-4xl md:text-6xl font-bold text-[var(--color-text)] mb-6"
+              >
+                Monte seu{' '}
+                <span className="text-transparent bg-gradient-to-r from-[var(--color-brand)] via-[var(--color-brand)] to-[var(--color-text)] bg-clip-text">
+                  Plano Personalizado
+                </span>
+              </motion.h2>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-xl text-[var(--color-text-muted)] max-w-3xl mx-auto leading-relaxed"
+              >
+                Cada veículo tem necessidades específicas. Nossos consultores especializados vão criar 
+                a solução perfeita para você, com os recursos que realmente precisa.
+              </motion.p>
+            </motion.div>
+
+            {/* Features Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="grid md:grid-cols-3 gap-8 mb-16"
+            >
+              {[
+                { 
+                  icon: UserCheck, 
+                  title: 'Consulta Gratuita',
+                  description: 'Análise completa das suas necessidades sem custo'
+                },
+                { 
+                  icon: Calculator, 
+                  title: 'Orçamento Sem Compromisso',
+                  description: 'Proposta personalizada sem obrigações'
+                },
+                { 
+                  icon: HeadphonesIcon, 
+                  title: 'Atendimento Especializado',
+                  description: 'Consultores experientes e dedicados'
+                }
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="text-center group"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-[var(--color-brand)]/10 rounded-2xl mb-4 group-hover:bg-[var(--color-brand)]/20 transition-all duration-300 group-hover:scale-110">
+                    <feature.icon size={28} className="text-[var(--color-brand)]" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            >
+              <motion.a
+                href="https://wa.me/5585999999999?text=Quero%20montar%20um%20plano%20personalizado%20para%20meu%20veículo"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-[var(--color-brand)] via-[var(--color-brand)]/90 to-[var(--color-brand)]/70 text-white px-10 py-5 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-2xl hover:shadow-[var(--color-brand)]/25 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-brand)]/90 via-[var(--color-brand)] to-[var(--color-brand)]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <FaWhatsapp size={24} className="relative z-10" />
+                <span className="relative z-10">Falar com Consultor</span>
+              </motion.a>
+            </motion.div>
+
+            {/* Bottom Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-[var(--color-border)]/30"
+            >
+              {[
+                { number: '+10.000', label: 'Clientes Atendidos' },
+                { number: '98%', label: 'Satisfação' },
+                { number: '< 2min', label: 'Tempo Resposta' },
+                { number: '24/7', label: 'Suporte Ativo' }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1.1 + index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-2xl md:text-3xl font-bold text-[var(--color-brand)] mb-1">
+                    {stat.number}
+                  </div>
+                  <div className="text-sm text-[var(--color-text-muted)]">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <div className="py-6 md:py-14">
+        <MainCta />
+      </div>
     </div>
   );
 };

@@ -9,10 +9,25 @@ import {
   Smartphone, 
   Headphones, 
   Wrench,
-  Star 
+  Star,
+  Phone,
+  Battery,
+  Power,
+  Lock,
+  Search,
+  Clock,
+  Unlock,
+  Package,
+  Plane,
+  Truck,
+  Award,
+  Navigation,
+  BarChart,
+  Gauge,
+  Radio,
+  Settings
 } from 'lucide-react';
 import { Service } from '../data/services';
-import { FaWhatsapp } from 'react-icons/fa';
 
 interface ServiceCardProps {
   service: Service;
@@ -20,8 +35,6 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
-  const whatsappUrl = `https://wa.me/5585999999999?text=Quero%20saber%20mais%20sobre%20${service.title}`;
-
   // Icon mapping using imported icons
   const iconMap: Record<string, React.ComponentType<any>> = {
     Shield,
@@ -32,6 +45,22 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     Smartphone,
     Headphones,
     Wrench,
+    Phone,
+    Battery,
+    Power,
+    Lock,
+    Search,
+    Clock,
+    Unlock,
+    Package,
+    Plane,
+    Truck,
+    Award,
+    Navigation,
+    BarChart,
+    Gauge,
+    Radio,
+    Settings,
   };
 
   const IconComponent = iconMap[service.icon] || Star;
@@ -72,15 +101,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         ))}
       </ul>
 
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center justify-center space-x-2 w-full bg-transparent border border-[var(--color-brand)] text-[var(--color-brand)] py-3 rounded-[var(--radius-button)] font-medium text-sm hover:bg-[var(--color-brand)] hover:text-white transition-colors"
-      >
-        <FaWhatsapp size={16} />
-        <span>Quero esse serviço</span>
-      </a>
     </motion.div>
   );
 };
