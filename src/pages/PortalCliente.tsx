@@ -293,23 +293,20 @@ const PortalCliente: React.FC = () => {
                 Emitir 2ª Via de Boleto
               </h3>
               <p className="text-[var(--color-text-muted)] mb-6">
-                Digite seu CPF ou CNPJ para gerar a segunda via do seu boleto
+                Clique no botão abaixo para acessar o portal do Banco do Brasil e gerar a segunda via do seu boleto
               </p>
               
               <div className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Digite seu CPF ou CNPJ"
-                  className="w-full px-4 py-3 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-[var(--radius-button)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-brand)] focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-opacity-20 transition-colors"
-                />
-                
-                <motion.button
+                <motion.a
+                  href="https://www63.bb.com.br/portalbb/boleto/boletos/hc21e,802,3322,10343.bbx?_ga=2.59242665.505440602.1598874158-303499835.1598874158&pk_vid=a6aba7f7a0b689061598874140f671d6"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full bg-[var(--color-brand)] text-white px-6 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-brand)]/90 transition-colors"
+                  className="w-full bg-[var(--color-brand)] text-white px-6 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-brand)]/90 transition-colors inline-block text-center"
                 >
-                  Gerar Segunda Via
-                </motion.button>
+                  Acessar Portal do Banco do Brasil
+                </motion.a>
               </div>
             </div>
           </motion.div>
