@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Smartphone, MapPin, FileText, CreditCard, Download, Phone, Mail, Clock } from 'lucide-react';
+import { Smartphone, MapPin, FileText, CreditCard, Phone, Mail, Clock } from 'lucide-react';
 import { FaWhatsapp, FaGooglePlay, FaApple } from 'react-icons/fa';
 
 const PortalCliente: React.FC = () => {
@@ -9,7 +9,7 @@ const PortalCliente: React.FC = () => {
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
       {/* Hero Section */}
-      <section className="pt-44 pb-16 bg-gradient-to-br from-[var(--color-bg-soft)] to-[var(--color-bg-muted)]">
+      <section className="pt-44 pb-4">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -29,7 +29,7 @@ const PortalCliente: React.FC = () => {
       </section>
 
       {/* App Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
@@ -129,7 +129,7 @@ const PortalCliente: React.FC = () => {
                       {/* Logo */}
                       <div className="text-center">
                         <div className="text-2xl font-bold text-[var(--color-brand)] mb-2">FORTE GPS</div>
-                        <div className="text-xs text-gray-600">SEGUE A DICA #VAIDEFORTEGPS</div>
+                        <div className="text-xs text-gray-500">SEGUE A DICA #VAIDEFORTEGPS</div>
                       </div>
 
                       {/* Vehicle Icons */}
@@ -144,10 +144,10 @@ const PortalCliente: React.FC = () => {
 
                       {/* Central Info */}
                       <div className="bg-gray-100 rounded-lg p-3 text-center">
-                        <div className="text-xs text-gray-600 mb-1">Central 24h:</div>
-                        <div className="text-xs font-semibold text-gray-800">0800 606 8153</div>
-                        <div className="text-xs font-semibold text-gray-800">3484 6006</div>
-                        <div className="text-xs text-gray-600 mt-1">fortegps.com.br</div>
+                        <div className="text-xs text-gray-500 mb-1">Central 24h:</div>
+                        <div className="text-xs font-semibold text-gray-700">0800 606 8153</div>
+                        <div className="text-xs font-semibold text-gray-700">3484 6006</div>
+                        <div className="text-xs text-gray-500 mt-1">fortegps.com.br</div>
                       </div>
                     </div>
 
@@ -168,7 +168,7 @@ const PortalCliente: React.FC = () => {
                     <div
                       key={dot}
                       className={`w-2 h-2 rounded-full ${
-                        dot === 1 ? 'bg-[var(--color-brand)]' : 'bg-gray-400'
+                        dot === 1 ? 'bg-[var(--color-brand)]' : 'bg-gray-500'
                       }`}
                     ></div>
                   ))}
@@ -180,7 +180,7 @@ const PortalCliente: React.FC = () => {
       </section>
 
       {/* Location Section */}
-      <section className="py-16 md:py-24 bg-[var(--color-bg-soft)]">
+      <section className="py-16 md:py-24 bg-[var(--color-bg-section)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -202,7 +202,7 @@ const PortalCliente: React.FC = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-[var(--color-bg-muted)] rounded-[var(--radius-card)] p-8 flex items-center justify-center min-h-[400px]"
+              className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-8 flex items-center justify-center min-h-[400px] border border-[var(--color-border)] shadow-sm"
             >
               <div className="text-center">
                 <MapPin size={48} className="text-[var(--color-brand)] mx-auto mb-4" />
@@ -220,7 +220,7 @@ const PortalCliente: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-6"
             >
-              <div className="bg-[var(--color-bg-muted)] rounded-[var(--radius-card)] p-6">
+              <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">SEDE</h3>
                 <p className="text-[var(--color-text-muted)]">
                   R. A - N° 981, Lot Parque Montenegro 1<br />
@@ -229,7 +229,7 @@ const PortalCliente: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-[var(--color-bg-muted)] rounded-[var(--radius-card)] p-6">
+              <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">FILIAL</h3>
                 <p className="text-[var(--color-text-muted)]">
                   Av. Gurgel do Amaral, N° 1037<br />
@@ -238,7 +238,7 @@ const PortalCliente: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-[var(--color-bg-muted)] rounded-[var(--radius-card)] p-6">
+              <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">Contato</h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
@@ -287,7 +287,7 @@ const PortalCliente: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-md mx-auto"
           >
-            <div className="bg-[var(--color-bg-soft)] rounded-[var(--radius-card)] p-8 text-center">
+            <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-8 text-center border border-[var(--color-border)] shadow-sm">
               <FileText size={48} className="text-[var(--color-brand)] mx-auto mb-6" />
               <h3 className="text-xl font-semibold text-[var(--color-text)] mb-4">
                 Emitir 2ª Via de Boleto
@@ -300,7 +300,7 @@ const PortalCliente: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Digite seu CPF ou CNPJ"
-                  className="w-full px-4 py-3 bg-[var(--color-bg-muted)] border border-[var(--color-border)] rounded-[var(--radius-button)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-brand)] transition-colors"
+                  className="w-full px-4 py-3 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-[var(--radius-button)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-brand)] focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-opacity-20 transition-colors"
                 />
                 
                 <motion.button
@@ -317,7 +317,7 @@ const PortalCliente: React.FC = () => {
       </section>
 
       {/* Payment Information Section */}
-      <section className="py-16 md:py-24 bg-[var(--color-bg-soft)]">
+      <section className="py-16 md:py-24 bg-[var(--color-bg-section)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -350,7 +350,7 @@ const PortalCliente: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
-                className="bg-[var(--color-bg-muted)] rounded-[var(--radius-card)] p-6 text-center hover:shadow-card transition-shadow"
+                className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 text-center border border-[var(--color-border)] hover:border-[var(--color-brand)]/30 hover:shadow-card transition-all duration-300 shadow-sm"
               >
                 <payment.icon size={32} className="text-[var(--color-brand)] mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
@@ -392,11 +392,11 @@ const PortalCliente: React.FC = () => {
               href="#"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-3 bg-black text-white px-6 py-3 rounded-[var(--radius-button)] hover:bg-gray-800 transition-colors"
+              className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-bg-soft)] transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
             >
               <FaGooglePlay size={24} />
               <div className="text-left">
-                <div className="text-xs">Disponível no</div>
+                <div className="text-xs text-[var(--color-text-muted)]">Disponível no</div>
                 <div className="text-sm font-semibold">Google Play</div>
               </div>
             </motion.a>
@@ -405,11 +405,11 @@ const PortalCliente: React.FC = () => {
               href="#"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-3 bg-black text-white px-6 py-3 rounded-[var(--radius-button)] hover:bg-gray-800 transition-colors"
+              className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-bg-soft)] transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
             >
               <FaApple size={24} />
               <div className="text-left">
-                <div className="text-xs">Disponível na</div>
+                <div className="text-xs text-[var(--color-text-muted)]">Disponível na</div>
                 <div className="text-sm font-semibold">App Store</div>
               </div>
             </motion.a>
