@@ -31,15 +31,15 @@ const Header: React.FC = () => {
             <div className="hover:text-[var(--color-text-beige)] cursor-pointer text-xs md:text-sm items-center space-x-6">
               <Link to="/portal-cliente" className="text-white hover:text-[var(--color-text-beige)] transition-colors">Portal do Cliente</Link>
             </div>
-            <div className="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm">
-              <Link to="tel:08006068153" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
-                0800 606 8153
-              </Link>
-              <span className="hidden md:inline text-white">|</span>
-              <Link to="tel:85934846006" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
-                (85) 3484 6006
-              </Link>
-            </div>
+             <div className="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm">
+               <a href="tel:08006068153" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
+                 0800 606 8153
+               </a>
+               <span className="hidden md:inline text-white">|</span>
+               <a href="tel:85934846006" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
+                 (85) 3484 6006
+               </a>
+             </div>
           </div>
         </div>
       </div>
