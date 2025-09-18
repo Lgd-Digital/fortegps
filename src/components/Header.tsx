@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon, Glasses, ShieldAlert } from 'lucide-react';
+import { Menu, X, Sun, Moon, ShieldAlert } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
@@ -14,6 +14,7 @@ const Header: React.FC = () => {
     { label: 'Home', path: '/' },
     { label: 'Sobre', path: '/sobre' },
     { label: 'Serviços', path: '/servicos' },
+    { label: 'Portal do Cliente', path: '/portal-cliente' },
     { label: 'Contato', path: '/contato' }
   ];
 
@@ -28,16 +29,16 @@ const Header: React.FC = () => {
         <div className="container">
           <div className="flex items-center justify-between py-2">
             <div className="hover:text-[var(--color-text-beige)] cursor-pointer text-xs md:text-sm items-center space-x-6">
-              <a href="https://portal.fortegps.com.br" target="_blank" rel="noopener noreferrer" className="text-white">Portal do Cliente</a>
+              <Link to="/portal-cliente" className="text-white hover:text-[var(--color-text-beige)] transition-colors">Portal do Cliente</Link>
             </div>
             <div className="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm">
-              <a href="tel:08006068153" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
+              <Link to="tel:08006068153" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
                 0800 606 8153
-              </a>
+              </Link>
               <span className="hidden md:inline text-white">|</span>
-              <a href="tel:85934846006" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
+              <Link to="tel:85934846006" className="hover:text-[var(--color-text-beige)] cursor-pointer transition-colors">
                 (85) 3484 6006
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -49,7 +50,7 @@ const Header: React.FC = () => {
             <div className="flex items-center justify-between h-16 md:h-20">
               {/* Logo */}
               <Link to="/" className="flex items-center">
-                <img src="/logo.png" alt="ForteGPS" className="w-auto h-40" />
+                <img src="/logo.png" alt="ForteGPS" className="w-auto h-12 md:h-16" />
               </Link>
 
               {/* Desktop Navigation */}

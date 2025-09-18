@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import Servicos from './pages/Servicos';
 import Contato from './pages/Contato';
+import PortalCliente from './pages/PortalCliente';
 import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/servicos" element={<Servicos />} />
               <Route path="/contato" element={<Contato />} />
+              <Route path="/portal-cliente" element={<PortalCliente />} />
             </Routes>
           </main>
           <Footer />

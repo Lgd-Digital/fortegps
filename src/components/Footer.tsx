@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           {/* Logo e Descrição */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center">
-              <img src="/logo.png" alt="ForteGPS" className="w-auto h-32" />
+              <img src="/logo.png" alt="ForteGPS" className="w-auto h-16 mb-4" />
             </Link>
             <p className="text-[var(--color-text-beige)] text-sm leading-relaxed">
               Tecnologia em rastreamento veicular com atendimento humanizado e suporte 24 horas.

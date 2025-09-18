@@ -9,7 +9,11 @@
   --color-bg-muted: #1F242B;
   --color-text: #FFFFFF;
   --color-text-muted: #E6E8EB;
+  --color-text-beige: #c8c3c3;
+  --color-text-header: #F1F5F9;
   --color-border: #1F242B;
+  --color-bg-card: #0B0B0B;
+  --color-bg-section: #111418;
   
   --font-family-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
