@@ -398,7 +398,6 @@ const Servicos: React.FC = () => {
                 className="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-[var(--color-brand)] via-[var(--color-brand)]/90 to-[var(--color-brand)]/70 text-white px-10 py-5 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-2xl hover:shadow-[var(--color-brand)]/25 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-brand)]/90 via-[var(--color-brand)] to-[var(--color-brand)]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <FaWhatsapp size={24} className="relative z-10" />
                 <span className="relative z-10">Contratar Assistência 24h</span>
               </motion.a>
             </motion.div>
