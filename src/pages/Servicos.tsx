@@ -47,7 +47,29 @@ const Servicos: React.FC = () => {
               />
             ))}
           </div>
+          
         </div>
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="flex flex-col sm:flex-row gap-6 mt-12 justify-center items-center"
+        >
+          <motion.a
+            href="https://wa.me/5585999999999?text=Quero%20montar%20um%20plano%20personalizado%20para%20meu%20veículo"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-[var(--color-brand)] via-[var(--color-brand)]/90 to-[var(--color-brand)]/85 text-white px-10 py-5 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-2xl hover:shadow-[var(--color-brand)]/25 overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-brand)]/90 via-[var(--color-brand)] to-[var(--color-brand)] opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <FaWhatsapp size={24} className="relative z-10" />
+            <span className="relative z-10">Monte seu Plano Personalizado</span>
+          </motion.a>
+        </motion.div>
       </section>
 
       {/* Vehicle Banner Section - Similar to provided image */}
@@ -147,54 +169,49 @@ const Servicos: React.FC = () => {
           </motion.div>
 
           {/* Features Grid */}
+          {/* Features Grid */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 1.1 }}
-            className="grid md:grid-cols-3 gap-6 mt-6"
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="grid md:grid-cols-3 gap-8 mb-16"
           >
             {[
               {
-                title: 'Caminhões',
-                description: 'Gestão profissional de frotas',
-                features: ['Monitoramento de carga', 'Relatórios detalhados'],
+                icon: UserCheck,
+                title: 'Consulta Gratuita',
+                description: 'Análise completa das suas necessidades sem custo'
               },
               {
-                title: 'Carros',
-                description: 'Proteção completa para veículos',
-                features: ['Bloqueio remoto', 'Cerca virtual'],
+                icon: Calculator,
+                title: 'Orçamento Sem Compromisso',
+                description: 'Proposta personalizada sem obrigações'
               },
               {
-                title: 'Motos',
-                description: 'Rastreamento discreto e eficiente',
-                features: ['Dispositivo compacto', 'Resistente à água'],
-              },
-            ].map((vehicle, index) => (
+                icon: HeadphonesIcon,
+                title: 'Atendimento Especializado',
+                description: 'Consultores experientes e dedicados'
+              }
+            ].map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 className="text-center group"
               >
-                <div className="bg-[var(--color-bg-card)] p-5 rounded-2xl border border-[var(--color-border)] hover:border-[var(--color-brand)]/30 transition-all duration-300 hover:shadow-lg">
-                  <h3 className="text-xl font-bold text-[var(--color-text)] mb-2 group-hover:text-[var(--color-brand)] transition-colors">
-                    {vehicle.title}
-                  </h3>
-                  <p className="text-[var(--color-text-muted)] mb-3">
-                    {vehicle.description}
-                  </p>
-                  <ul className="space-y-1">
-                    {vehicle.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center justify-center text-sm text-[var(--color-text-muted)]">
-                        <div className="w-1.5 h-1.5 bg-[var(--color-brand)] rounded-full mr-2 flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-[var(--color-brand)]/10 rounded-2xl mb-4 group-hover:bg-[var(--color-brand)]/20 transition-all duration-300 group-hover:scale-110">
+                  <feature.icon size={28} className="text-[var(--color-brand)]" />
                 </div>
+                <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </motion.div>

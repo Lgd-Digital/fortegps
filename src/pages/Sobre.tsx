@@ -81,7 +81,7 @@ const Sobre: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-6">
-                Nossa Missão
+                Missão
               </h2>
               <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
                 Nossa missão é proporcionar segurança com qualidade, aliando tecnologia
@@ -97,7 +97,7 @@ const Sobre: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-6">
-                Nossa Visão
+                Visão
               </h2>
               <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
                 Ser referência nacional em tecnologia de rastreamento e gestão inteligente de frotas e patrimônios, 
@@ -138,7 +138,7 @@ const Sobre: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-8 text-center">
-              Nossos Valores
+              Valores
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-[var(--color-bg-card)] p-6 rounded-lg border border-[var(--color-border)] shadow-sm">
