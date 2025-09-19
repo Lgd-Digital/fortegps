@@ -349,7 +349,7 @@ const Servicos: React.FC = () => {
                   whileHover={{ y: -8, scale: 1.02 }}
                   className="group relative"
                 >
-                  <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-[var(--color-border)]/20 h-full">
+                  <div className="relative bg-[var(--color-bg-card)] rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-[var(--color-border)]/20 h-full">
                     {/* Background gradient on hover */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
                     
