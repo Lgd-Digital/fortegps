@@ -1,10 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Target, 
   UserCheck, 
   Calculator, 
-  Headphones as HeadphonesIcon
+  Headphones as HeadphonesIcon,
+  Truck,
+  Zap,
+  Wrench,
+  Car,
+  Key
 } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { services } from '../data/services';
@@ -218,7 +222,7 @@ const Servicos: React.FC = () => {
         </div>
       </section>
 
-      {/* Custom Plan CTA */}
+      {/* Vehicle Assistance Section */}
       <section className="relative py-20 md:py-24 bg-gradient-to-br from-[var(--color-bg-section)] via-[var(--color-bg)] to-[var(--color-bg-section)] overflow-hidden">
         {/* Background Decorative Elements */}
         <div className="absolute inset-0">
@@ -228,7 +232,7 @@ const Servicos: React.FC = () => {
         </div>
         
         <div className="container relative z-10">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             {/* Header Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -244,7 +248,7 @@ const Servicos: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-[var(--color-brand)] to-[var(--color-brand)]/70 rounded-2xl mb-8 shadow-2xl"
               >
-                <Target size={40} className="text-white" />
+                <Wrench size={40} className="text-white" />
               </motion.div>
               
               <motion.h2
@@ -252,11 +256,11 @@ const Servicos: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-4xl md:text-6xl font-bold text-[var(--color-text)] mb-6"
+                className="text-3xl md:text-5xl font-bold text-[var(--color-text)] mb-6 leading-tight"
               >
-                Monte seu{' '}
+                Plano de Assistência {''}
                 <span className="text-transparent bg-gradient-to-r from-[var(--color-brand)] via-[var(--color-brand)] to-[var(--color-text)] bg-clip-text">
-                  Plano Personalizado
+                  24h
                 </span>
               </motion.h2>
               
@@ -265,70 +269,128 @@ const Servicos: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-xl text-[var(--color-text-muted)] max-w-3xl mx-auto leading-relaxed"
+                className="text-lg md:text-xl text-[var(--color-text-muted)] max-w-4xl mx-auto leading-relaxed mb-4"
               >
-                Cada veículo tem necessidades específicas. Nossos consultores especializados vão criar 
-                a solução perfeita para você, com os recursos que realmente precisa.
+                Nosso serviço de <strong className="text-[var(--color-brand)]">Assistência Veicular 24h</strong> foi pensado para você nunca ficar na mão.
+              </motion.p>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-base text-[var(--color-text-muted)] max-w-3xl mx-auto leading-relaxed"
+              >
+                Com cobertura nacional e mais de <strong className="text-[var(--color-brand)]">60 mil prestadores de serviço</strong> espalhados pelo Brasil, você conta com serviços como:
               </motion.p>
             </motion.div>
 
-            {/* Features Grid */}
+            {/* Services Grid */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="grid md:grid-cols-3 gap-8 mb-16"
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16"
             >
               {[
-                { 
-                  icon: UserCheck, 
-                  title: 'Consulta Gratuita',
-                  description: 'Análise completa das suas necessidades sem custo'
+                {
+                  icon: Truck,
+                  title: 'REBOQUE',
+                  subtitle: '(TOWING)',
+                  description: 'Até oficina ou concessionário em um raio máximo de 150 km de ida e volta.',
+                  color: 'from-red-500 to-red-600',
+                  bgColor: 'bg-red-50',
+                  iconColor: 'text-red-600'
                 },
-                { 
-                  icon: Calculator, 
-                  title: 'Orçamento Sem Compromisso',
-                  description: 'Proposta personalizada sem obrigações'
+                {
+                  icon: Zap,
+                  title: 'SOS ELÉTRICO',
+                  subtitle: '(ELECTRICAL SOS)',
+                  description: 'Serviço de socorro elétrico com distância de até 100 km do prestador afiliado.',
+                  color: 'from-yellow-500 to-orange-500',
+                  bgColor: 'bg-yellow-50',
+                  iconColor: 'text-yellow-600'
                 },
-                { 
-                  icon: HeadphonesIcon, 
-                  title: 'Atendimento Especializado',
-                  description: 'Consultores experientes e dedicados'
+                {
+                  icon: Car,
+                  title: 'TROCA DE PNEU',
+                  subtitle: '(TIRE CHANGE)',
+                  description: 'Envio de um profissional para realizar a troca do pneu pelo estepe do veículo ou reboque até uma oficina. Limite de 100 km.',
+                  color: 'from-gray-600 to-gray-700',
+                  bgColor: 'bg-gray-50',
+                  iconColor: 'text-gray-600'
+                },
+                {
+                  icon: Car,
+                  title: 'TÁXI/UBER',
+                  subtitle: '(TAXI/UBER)',
+                  description: 'Viagem no valor de até R$70,00 dentro da sua cidade, em caso de roubo ou furto.',
+                  color: 'from-blue-600 to-blue-700',
+                  bgColor: 'bg-blue-50',
+                  iconColor: 'text-blue-600'
+                },
+                {
+                  icon: Key,
+                  title: 'CHAVEIRO',
+                  subtitle: '(LOCKSMITH)',
+                  description: 'Em casos em que o veículo não pode ser aberto e/ou acionado. Limite de até 100 km do profissional afiliado.',
+                  color: 'from-purple-600 to-purple-700',
+                  bgColor: 'bg-purple-50',
+                  iconColor: 'text-purple-600'
                 }
-              ].map((feature, index) => (
+              ].map((service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                   whileHover={{ y: -8, scale: 1.02 }}
-                  className="text-center group"
+                  className="group relative"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-[var(--color-brand)]/10 rounded-2xl mb-4 group-hover:bg-[var(--color-brand)]/20 transition-all duration-300 group-hover:scale-110">
-                    <feature.icon size={28} className="text-[var(--color-brand)]" />
+                  <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-[var(--color-border)]/20 h-full">
+                    {/* Background gradient on hover */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
+                    
+                    {/* Icon */}
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className={`relative inline-flex items-center justify-center w-16 h-16 ${service.bgColor} rounded-2xl mb-4 group-hover:shadow-lg transition-all duration-300`}
+                    >
+                      <service.icon size={32} className={`${service.iconColor} group-hover:scale-110 transition-transform duration-300`} />
+                    </motion.div>
+                    
+                    {/* Title */}
+                    <h3 className="text-lg font-bold text-[var(--color-text)] mb-1 group-hover:text-[var(--color-brand)] transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-[var(--color-text-muted)] mb-3 font-medium">
+                      {service.subtitle}
+                    </p>
+                    
+                    {/* Description */}
+                    <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    {/* Hover effect line */}
+                    <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color} rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></div>
                   </div>
-                  <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
                 </motion.div>
               ))}
             </motion.div>
 
-            {/* CTA Buttons */}
+            {/* CTA Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              className="text-center"
             >
               <motion.a
-                href="https://wa.me/5585999999999?text=Quero%20montar%20um%20plano%20personalizado%20para%20meu%20veículo"
+                href="https://wa.me/5585999999999?text=Quero%20contratar%20o%20serviço%20de%20Assistência%20Veicular%2024h"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -337,40 +399,8 @@ const Servicos: React.FC = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-brand)]/90 via-[var(--color-brand)] to-[var(--color-brand)]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <FaWhatsapp size={24} className="relative z-10" />
-                <span className="relative z-10">Falar com Consultor</span>
+                <span className="relative z-10">Contratar Assistência 24h</span>
               </motion.a>
-            </motion.div>
-
-            {/* Bottom Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-[var(--color-border)]/30"
-            >
-              {[
-                { number: '+10.000', label: 'Clientes Atendidos' },
-                { number: '98%', label: 'Satisfação' },
-                { number: '< 2min', label: 'Tempo Resposta' },
-                { number: '24/7', label: 'Suporte Ativo' }
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 1.1 + index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-2xl md:text-3xl font-bold text-[var(--color-brand)] mb-1">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-[var(--color-text-muted)]">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
             </motion.div>
           </div>
         </div>
