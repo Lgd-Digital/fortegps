@@ -58,7 +58,7 @@ const PortalCliente: React.FC = () => {
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-[var(--color-text-muted)]">Histórico de percurso de 60 dias</p>
+                  <p className="text-[var(--color-text-muted)]">Histórico de percurso</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
@@ -78,11 +78,11 @@ const PortalCliente: React.FC = () => {
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-[var(--color-text-muted)]">Alarmes de abertura de porta</p>
+                    <p className="text-[var(--color-text-muted)]">Cerca Virtual</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-[var(--color-text-muted)]">Definir cerca de proteção</p>
+                    <p className="text-[var(--color-text-muted)]">Relatórios diversos</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
@@ -223,39 +223,45 @@ const PortalCliente: React.FC = () => {
               <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">SEDE</h3>
                 <p className="text-[var(--color-text-muted)]">
-                  R. A - N° 981, Lot Parque Montenegro 1<br />
-                  Bairro Parque Dois Irmãos<br />
-                  Fortaleza - CE
+                  Rua José Hipólito, 550, Sala 40 - <br/>CEP: 60871170 - Messejana - Fortaleza/CE
                 </p>
               </div>
 
-              <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
+              {/* <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">FILIAL</h3>
                 <p className="text-[var(--color-text-muted)]">
                   Av. Gurgel do Amaral, N° 1037<br />
                   Bairro Messejana<br />
                   Fortaleza - CE
                 </p>
-              </div>
+              </div> */}
 
               <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">Contato</h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <Phone size={20} className="text-[var(--color-brand)]" />
-                    <span className="text-[var(--color-text-muted)]">0800 606 8153</span>
+                    <span className="text-[var(--color-text-muted)]">0800 581 2716 (Monitoramento 24H)</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone size={20} className="text-[var(--color-brand)]" />
-                    <span className="text-[var(--color-text-muted)]">(85) 3484 6006</span>
+                    <span className="text-[var(--color-text-muted)]">(85) 3222-1684 (Setor Comercial)</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone size={20} className="text-[var(--color-brand)]" />
+                    <span className="text-[var(--color-text-muted)]">(85) 99835-0842 (Suporte Técnico)</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail size={20} className="text-[var(--color-brand)]" />
-                    <span className="text-[var(--color-text-muted)]">contato@fortegps.com.br</span>
+                    <span className="text-[var(--color-text-muted)]">atendimento@fortegps.com.br</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Clock size={20} className="text-[var(--color-brand)]" />
-                    <span className="text-[var(--color-text-muted)]">Seg-Sex: 8h às 18h</span>
+                    <span className="text-[var(--color-text-muted)]">Central de Monitoramento: 24hrs</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Clock size={20} className="text-[var(--color-brand)]" />
+                    <span className="text-[var(--color-text-muted)]">Outros setores: Seg-Sex 8h às 18h | Sáb 8h à 12hrs</span>
                   </div>
                 </div>
               </div>
@@ -334,10 +340,9 @@ const PortalCliente: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {[
-              { icon: CreditCard, title: 'Cartões de Crédito', description: 'Visa, Mastercard, Elo' },
               { icon: FileText, title: 'À Vista', description: 'Pagamento único' },
               { icon: FileText, title: 'Boleto', description: 'Bancário tradicional' },
               { icon: Smartphone, title: 'PIX', description: 'Pagamento instantâneo' }
@@ -389,7 +394,7 @@ const PortalCliente: React.FC = () => {
               href="#"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-bg-soft)] transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
+              className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-brand)] transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
             >
               <FaGooglePlay size={24} />
               <div className="text-left">
@@ -402,7 +407,7 @@ const PortalCliente: React.FC = () => {
               href="#"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-bg-soft)] transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
+              className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-brand)] transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
             >
               <FaApple size={24} />
               <div className="text-left">
@@ -413,7 +418,6 @@ const PortalCliente: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
     </div>
   );
 };

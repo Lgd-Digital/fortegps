@@ -281,7 +281,7 @@ const Servicos: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="text-base text-[var(--color-text-muted)] max-w-3xl mx-auto leading-relaxed"
               >
-                Com cobertura nacional e mais de <strong className="text-[var(--color-brand)]">60 mil prestadores de serviço</strong> espalhados pelo Brasil, você conta com serviços como:
+                Com cobertura nacional e com parceiros espalhados por todo Brasil, você conta com serviços como
               </motion.p>
             </motion.div>
 

@@ -36,7 +36,7 @@ const Sobre: React.FC = () => {
     {
       icon: Clock,
       title: 'Suporte Imediato',
-      description: 'Central de atendimento 24 horas com uma equipe especializada pronta para ajudar em qualquer situação.'
+      description: 'Central de atendimento 24 horas e setor técnico com uma equipe especializada pronta para ajudar em qualquer situação.'
     },
     {
       icon: Shield,
