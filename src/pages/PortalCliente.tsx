@@ -407,7 +407,7 @@ const PortalCliente: React.FC = () => {
               href="#"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-brand)] transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
+              className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-bg-soft)] transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
             >
               <FaApple size={24} />
               <div className="text-left">

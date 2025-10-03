@@ -1,33 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import MapComponent from '../components/MapComponent';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Contato: React.FC = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Telefone',
-      value: '(85) 99999-9999',
-      link: 'tel:+5585999999999'
+      title: 'Suporte Técnico',
+      value: '(85) 99835-0842',
+      link: 'tel:+5585998350842'
+    },
+    {
+      icon: Phone,
+      title: 'Financeiro',
+      value: '(85) 99978-4055',
+      link: 'tel:+5585999784055'
     },
     {
       icon: FaWhatsapp,
       title: 'WhatsApp',
-      value: '(85) 99999-9999',
-      link: 'https://wa.me/5585999999999?text=Olá%2C%20quero%20informações%20sobre%20rastreamento'
+      value: '(85) 99835-0842',
+      link: 'https://wa.me/5585998350842?text=Olá%2C%20quero%20informações%20sobre%20rastreamento'
     },
     {
       icon: Mail,
       title: 'E-mail',
-      value: 'contato@fortegps.com.br',
-      link: 'mailto:contato@fortegps.com.br'
+      value: 'atendimento@fortegps.com.br',
+      link: 'mailto:atendimento@fortegps.com.br'
     },
     {
       icon: Clock,
       title: 'Horário de Atendimento',
-      value: 'Segunda a Sexta: 8h às 18h',
+      value: 'Seg-Sex: 8h às 18h | Sáb: 8h às 12h',
       link: null
     }
   ];
@@ -58,37 +65,76 @@ const Contato: React.FC = () => {
       {/* Contact Options */}
       <section className="pb-16">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {contactInfo.map((info, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-[var(--color-bg-card)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] text-center hover:border-[var(--color-brand)]/30 transition-all duration-300 shadow-sm"
-              >
-                <div className="w-12 h-12 bg-[var(--color-brand)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <info.icon size={24} className="text-[var(--color-brand)]" />
-                </div>
-                <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
-                  {info.title}
-                </h3>
-                {info.link ? (
-                  <a
-                    href={info.link}
-                    target={info.link.startsWith('http') ? '_blank' : undefined}
-                    rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="text-[var(--color-brand)] hover:text-[var(--color-brand)]/80 transition-colors font-medium"
+          <div className="mb-16">
+            {/* Primeira linha - 3 colunas */}
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              {contactInfo.slice(0, 3).map((info, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-[var(--color-bg-card)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] text-center hover:border-[var(--color-brand)]/30 transition-all duration-300 shadow-sm"
+                >
+                  <div className="w-12 h-12 bg-[var(--color-brand)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <info.icon size={24} className="text-[var(--color-brand)]" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
+                    {info.title}
+                  </h3>
+                  {info.link ? (
+                    <a
+                      href={info.link}
+                      target={info.link.startsWith('http') ? '_blank' : undefined}
+                      rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="text-[var(--color-brand)] hover:text-[var(--color-brand)]/80 transition-colors font-medium"
+                    >
+                      {info.value}
+                    </a>
+                  ) : (
+                    <p className="text-[var(--color-text-muted)] text-sm">
+                      {info.value}
+                    </p>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Segunda linha - 2 colunas centralizadas */}
+            <div className="flex justify-center">
+              <div className="grid md:grid-cols-2 gap-6">
+                {contactInfo.slice(3).map((info, index) => (
+                  <motion.div
+                    key={index + 3}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: (index + 3) * 0.1 }}
+                    className="bg-[var(--color-bg-card)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] text-center hover:border-[var(--color-brand)]/30 transition-all duration-300 shadow-sm"
                   >
-                    {info.value}
-                  </a>
-                ) : (
-                  <p className="text-[var(--color-text-muted)] text-sm">
-                    {info.value}
-                  </p>
-                )}
-              </motion.div>
-            ))}
+                    <div className="w-12 h-12 bg-[var(--color-brand)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <info.icon size={24} className="text-[var(--color-brand)]" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
+                      {info.title}
+                    </h3>
+                    {info.link ? (
+                      <a
+                        href={info.link}
+                        target={info.link.startsWith('http') ? '_blank' : undefined}
+                        rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className="text-[var(--color-brand)] hover:text-[var(--color-brand)]/80 transition-colors font-medium"
+                      >
+                        {info.value}
+                      </a>
+                    ) : (
+                      <p className="text-[var(--color-text-muted)] text-sm">
+                        {info.value}
+                      </p>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Form and Map */}
@@ -101,8 +147,9 @@ const Contato: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h3 className="text-2xl font-bold text-[var(--color-text)] mb-6">
-                Área de Atuação
+                Nossa Localização
               </h3>
+              {/* <MapComponent /> */}
               <div className="bg-[var(--color-bg-card)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] mb-6 shadow-sm">
                 <div className="aspect-video bg-[var(--color-bg-muted)] rounded-lg flex items-center justify-center mb-4">
                   <div className="text-center">
@@ -129,20 +176,20 @@ const Contato: React.FC = () => {
                 </h4>
                 <div className="space-y-3">
                   <a
-                    href="https://wa.me/5585999999999?text=Quero%20agendar%20uma%20visita"
+                    href="https://wa.me/5585998350842?text=Quero%20agendar%20uma%20visita"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-[var(--color-brand)] hover:text-[var(--color-brand)]/80 transition-colors"
                   >
                     <FaWhatsapp size={18} />
-                    <span className="font-medium">WhatsApp: (85) 99999-9999</span>
+                    <span className="font-medium">WhatsApp: (85) 99835-0842</span>
                   </a>
                   <a
-                    href="tel:+5585999999999"
+                    href="tel:+5585998350842"
                     className="flex items-center space-x-2 text-[var(--color-text-muted)] hover:text-[var(--color-brand)] transition-colors"
                   >
                     <Phone size={18} />
-                    <span>Ligação: (85) 99999-9999</span>
+                    <span>Ligação: (85) 99835-0842</span>
                   </a>
                 </div>
               </div>

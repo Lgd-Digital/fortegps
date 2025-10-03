@@ -4,7 +4,7 @@ import { Mail, Clock } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5585999999999?text=Olá%2C%20quero%20saber%20mais%20sobre%20rastreamento";
+  const whatsappUrl = "https://wa.me/5585998350842?text=Olá%2C%20quero%20saber%20mais%20sobre%20rastreamento";
 
   return (
     <footer className="bg-[var(--color-bg-soft)] border-t border-[var(--color-border)]">
@@ -61,18 +61,18 @@ const Footer: React.FC = () => {
                 className="flex items-center space-x-2 text-sm text-[var(--color-text-beige)] hover:text-[var(--color-brand)] transition-colors"
               >
                 <FaWhatsapp size={16} />
-                <span>(85) 99999-9999</span>
+                <span>(85) 99835-0842</span>
               </a>
               <a 
-                href="mailto:contato@fortegps.com.br"
+                href="mailto:atendimento@fortegps.com.br"
                 className="flex items-center space-x-2 text-sm text-[var(--color-text-beige)] hover:text-[var(--color-brand)] transition-colors"
               >
                 <Mail size={16} />
-                <span>contato@fortegps.com.br</span>
+                <span>atendimento@fortegps.com.br</span>
               </a>
               <div className="flex items-center space-x-2 text-sm text-[var(--color-text-beige)]">
                 <Clock size={16} />
-                <span>Seg-Sex: 8h às 18h</span>
+                <span>Seg-Sex: 8h às 18h | Sáb: 8h às 12h</span>
               </div>
             </div>
           </div>
