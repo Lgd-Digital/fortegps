@@ -146,28 +146,9 @@ const Contato: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h3 className="text-2xl font-bold text-[var(--color-text)] mb-6">
-                Nossa Localização
-              </h3>
+              
               {/* <MapComponent /> */}
-              <div className="bg-[var(--color-bg-card)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] mb-6 shadow-sm">
-                <div className="aspect-video bg-[var(--color-bg-muted)] rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-center">
-                    <MapPin size={48} className="text-[var(--color-brand)] mx-auto mb-2" />
-                    <p className="text-[var(--color-text-muted)]">Mapa da Região Metropolitana</p>
-                    <p className="text-sm text-[var(--color-text-muted)] opacity-70">Fortaleza e região</p>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <h4 className="font-semibold text-[var(--color-text)] mb-2">
-                    Cobertura Completa
-                  </h4>
-                  <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    Atendemos toda a região metropolitana de Fortaleza com instalação 
-                    e suporte técnico especializado.
-                  </p>
-                </div>
-              </div>
+              <MapComponent />
 
               {/* Quick Contact */}
               <div className="bg-[var(--color-bg-card)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm">

@@ -1,10 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Smartphone, MapPin, FileText, CreditCard, Phone, Mail, Clock } from 'lucide-react';
+import { Smartphone, FileText, Phone, Mail, Clock } from 'lucide-react';
 import { FaWhatsapp, FaGooglePlay, FaApple } from 'react-icons/fa';
 
 const PortalCliente: React.FC = () => {
   const whatsappUrl = "https://wa.me/5585999999999?text=Olá%2C%20preciso%20de%20ajuda%20com%20o%20portal%20do%20cliente";
+
+  const address = "Rua José Hipólito, 550, Sala 40 - CEP: 60871170 - Messejana - Fortaleza/CE";
+  const encodedAddress = encodeURIComponent(address);
+  
+  const googleMapsEmbedUrl = `https://maps.google.com/maps?q=${encodedAddress}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+  
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
@@ -204,13 +210,17 @@ const PortalCliente: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-8 flex items-center justify-center min-h-[400px] border border-[var(--color-border)] shadow-sm"
             >
-              <div className="text-center">
-                <MapPin size={48} className="text-[var(--color-brand)] mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-[var(--color-text)] mb-2">Mapa Interativo</h3>
-                <p className="text-[var(--color-text-muted)]">
-                  Aqui será integrado um mapa interativo mostrando nossas localizações
-                </p>
-              </div>
+              <iframe
+            src={googleMapsEmbedUrl}
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Localização da ForteGPS"
+            className="rounded-lg"
+          />
             </motion.div>
 
             {/* Addresses */}
