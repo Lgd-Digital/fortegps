@@ -8,25 +8,28 @@ import Servicos from './pages/Servicos';
 import Contato from './pages/Contato';
 import PortalCliente from './pages/PortalCliente';
 import { ThemeProvider } from './contexts/ThemeContext';
+import ScrollToTopWrapper from './components/ScrollToTopWrapper';
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="min-h-screen bg-[var(--color-bg)]">
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/sobre" element={<Sobre />} />
-              <Route path="/servicos" element={<Servicos />} />
-              <Route path="/contato" element={<Contato />} />
-              <Route path="/portal-cliente" element={<PortalCliente />} />
-            </Routes>
-          </main>
-          <Footer />
-          <WhatsAppFloat />
-        </div>
+        <ScrollToTopWrapper>
+          <div className="min-h-screen bg-[var(--color-bg)]">
+            <Header />
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/sobre" element={<Sobre />} />
+                <Route path="/servicos" element={<Servicos />} />
+                <Route path="/contato" element={<Contato />} />
+                <Route path="/portal-cliente" element={<PortalCliente />} />
+              </Routes>
+            </main>
+            <Footer />
+            <WhatsAppFloat />
+          </div>
+        </ScrollToTopWrapper>
       </Router>
     </ThemeProvider>
   );
