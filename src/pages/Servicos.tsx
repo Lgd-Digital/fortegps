@@ -109,27 +109,7 @@ const Servicos: React.FC = () => {
             
             {/* Vehicles Container */}
             <div className="relative flex items-center justify-center min-h-[300px] md:min-h-[400px] px-4 py-4">
-              {/* Van/Caminhão - Left */}
-              <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="absolute left-0 md:left-8 z-10"
-              >
-                <div className="relative group">
-                  <img 
-                    src="/fh.png" 
-                    alt="Caminhão" 
-                    className="h-32 md:h-48 w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[var(--color-bg-card)] px-3 py-1 rounded-full border border-[var(--color-border)] shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-xs font-medium text-[var(--color-text)]">Caminhões</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Carro - Center (Destaque) */}
+              {/* Veiculos - Center (Destaque) */}
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -140,33 +120,10 @@ const Servicos: React.FC = () => {
                 <div className="relative group">
                   <div className="absolute -inset-4 bg-gradient-to-r from-[var(--color-brand)]/20 via-[var(--color-brand)]/10 to-[var(--color-brand)]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <img 
-                    src="/vw.png" 
+                    src="./veiculos.webp" 
                     alt="Carro" 
                     className="relative h-40 md:h-56 w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-[var(--color-brand)] text-white px-4 py-2 rounded-full shadow-xl">
-                    <span className="text-sm font-semibold">Carros</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Moto - Right */}
-              <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.9 }}
-                className="absolute right-0 md:right-8 z-10"
-              >
-                <div className="relative group">
-                  <img 
-                    src="/moto.png" 
-                    alt="Moto" 
-                    className="h-32 md:h-48 w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[var(--color-bg-card)] px-3 py-1 rounded-full border border-[var(--color-border)] shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-xs font-medium text-[var(--color-text)]">Motos</span>
-                  </div>
                 </div>
               </motion.div>
             </div>
