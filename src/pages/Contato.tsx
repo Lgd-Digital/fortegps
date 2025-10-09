@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, Clock, MapPin } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin, Headset, Banknote } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import MapComponent from '../components/MapComponent';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -8,20 +8,20 @@ import { FaWhatsapp } from 'react-icons/fa';
 const Contato: React.FC = () => {
   const contactInfo = [
     {
-      icon: Phone,
+      icon: Headset,
       title: 'Suporte Técnico',
       value: '(85) 99835-0842',
       link: 'tel:+5585998350842'
     },
     {
-      icon: Phone,
+      icon: Banknote,
       title: 'Financeiro',
       value: '(85) 99978-4055',
       link: 'tel:+5585999784055'
     },
     {
       icon: FaWhatsapp,
-      title: 'WhatsApp',
+      title: 'Monitoramento 24h',
       value: '(85) 99835-0842',
       link: 'https://wa.me/5585998350842?text=Olá%2C%20quero%20informações%20sobre%20rastreamento'
     },
@@ -166,11 +166,11 @@ const Contato: React.FC = () => {
                     <span className="font-medium">WhatsApp: (85) 99835-0842</span>
                   </a>
                   <a
-                    href="tel:+5585998350842"
+                    href="tel:+558508005812716"
                     className="flex items-center space-x-2 text-[var(--color-text-muted)] hover:text-[var(--color-brand)] transition-colors"
                   >
                     <Phone size={18} />
-                    <span>Ligação: (85) 99835-0842</span>
+                    <span>Ligação: (85) 0800 581 2716</span>
                   </a>
                 </div>
               </div>

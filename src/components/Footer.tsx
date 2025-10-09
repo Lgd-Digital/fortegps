@@ -4,7 +4,7 @@ import { Mail, Clock } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5585998350842?text=Olá%2C%20quero%20saber%20mais%20sobre%20rastreamento";
+  const whatsappUrl = "https://wa.me/558532221684?text=Olá%2C%20quero%20saber%20mais%20sobre%20rastreamento";
 
   return (
     <footer className="bg-[var(--color-bg-soft)] border-t border-[var(--color-border)]">
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               <img src="/logo.png" alt="ForteGPS" className="w-auto h-16 mb-4" />
             </Link>
             <p className="text-[var(--color-text-beige)] text-sm leading-relaxed">
-              Tecnologia em rastreamento veicular com atendimento humanizado e suporte 24 horas.
+              Para quem não tem seguro, mas não abre mão da segurança.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-semibold text-brand mb-4">Serviços</h4>
             <div className="space-y-2">
-              <p className="text-sm text-[var(--color-text-beige)]">Rastreamento GPS</p>
+              <p className="text-sm text-[var(--color-text-beige)]">Rastreamento Veicular</p>
               <p className="text-sm text-[var(--color-text-beige)]">Bloqueio Remoto</p>
               <p className="text-sm text-[var(--color-text-beige)]">Monitoramento 24h</p>
               <p className="text-sm text-[var(--color-text-beige)]">Suporte Técnico</p>
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
                 className="flex items-center space-x-2 text-sm text-[var(--color-text-beige)] hover:text-[var(--color-brand)] transition-colors"
               >
                 <FaWhatsapp size={16} />
-                <span>(85) 99835-0842</span>
+                <span>(85) 3222-1684</span>
               </a>
               <a 
                 href="mailto:atendimento@fortegps.com.br"

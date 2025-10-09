@@ -2,11 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Smartphone, FileText, Phone, Mail, Clock } from 'lucide-react';
 import { FaWhatsapp, FaGooglePlay, FaApple } from 'react-icons/fa';
+import { FaBarcode } from 'react-icons/fa6';
 
 const PortalCliente: React.FC = () => {
   const whatsappUrl = "https://wa.me/5585999999999?text=Olá%2C%20preciso%20de%20ajuda%20com%20o%20portal%20do%20cliente";
 
-  const address = "Rua José Hipólito, 550, Sala 40 - CEP: 60871170 - Messejana - Fortaleza/CE";
+  const address = "Rua José Hipólito, 550, Sala 41 - CEP: 60871170 - Messejana - Fortaleza/CE";
   const encodedAddress = encodeURIComponent(address);
   
   const googleMapsEmbedUrl = `https://maps.google.com/maps?q=${encodedAddress}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
@@ -82,6 +83,10 @@ const PortalCliente: React.FC = () => {
                 </h3>
                 
                 <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-[var(--color-text-muted)]">Identificador de motorista</p>
+                  </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-[var(--color-text-muted)]">Cerca Virtual</p>
@@ -304,7 +309,7 @@ const PortalCliente: React.FC = () => {
             className="max-w-md mx-auto"
           >
             <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-8 text-center border border-[var(--color-border)] shadow-sm">
-              <FileText size={48} className="text-[var(--color-brand)] mx-auto mb-6" />
+              <FaBarcode size={48} className="text-[var(--color-brand)] mx-auto mb-6" />
               <h3 className="text-xl font-semibold text-[var(--color-text)] mb-4">
                 Emitir 2ª Via de Boleto
               </h3>
@@ -354,7 +359,7 @@ const PortalCliente: React.FC = () => {
           >
             {[
               { icon: FileText, title: 'À Vista', description: 'Pagamento único' },
-              { icon: FileText, title: 'Boleto', description: 'Bancário tradicional' },
+              { icon: FaBarcode, title: 'Boleto', description: 'Bancário tradicional' },
               { icon: Smartphone, title: 'PIX', description: 'Pagamento instantâneo' }
             ].map((payment, index) => (
               <motion.div

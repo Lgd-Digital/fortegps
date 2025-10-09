@@ -75,9 +75,9 @@ const CTASection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-text)] mb-6"
           >
-            Pronto para{' '}
-            <span className="text-[var(--color-brand)]">Proteger</span>{' '}
-            seu Veículo?
+            Comece{' '}
+            <span className="text-[var(--color-brand)]">agora</span>{' '}
+            mesmo
           </motion.h2>
 
           <motion.p

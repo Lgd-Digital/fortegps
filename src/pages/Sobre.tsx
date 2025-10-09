@@ -7,18 +7,18 @@ const Sobre: React.FC = () => {
   const steps = [
     {
       number: '01',
-      title: 'Instalação Profissional',
-      description: 'Nossos técnicos especializados instalam o equipamento em seu veículo de forma discreta e segura, sem danificar a estrutura original.'
+      title: 'Setor Comercial',
+      description: 'Nossos setores comerciais estão com equipe especializada para atender a todos os clientes.'
     },
     {
       number: '02',
-      title: 'Monitoramento 24h',
-      description: 'Sistema em funcionamento contínuo, enviando dados de localização e status do veículo para nossos servidores em tempo real.'
+      title: 'Agendamento',
+      description: 'Agendamento de instalação, consulta, manutenção e suporte técnico.'
     },
     {
       number: '03',
-      title: 'Ações e Alertas',
-      description: 'Receba notificações instantâneas e tenha controle total através do app, incluindo bloqueio remoto e histórico de rotas.'
+      title: 'Central 24h',
+      description: 'Central de atendimento 24 horas para atender a todos os clientes.'
     }
   ];
 
@@ -31,7 +31,7 @@ const Sobre: React.FC = () => {
     {
       icon: Award,
       title: 'Tecnologia Certificada',
-      description: 'Equipamentos homologados pela Anatel e parceria com as principais fabricantes do mercado nacional.'
+      description: 'Equipamentos homologados pela Anatel e parceria com os principais fabricantes do segmento de rastreamento veícular'
     },
     {
       icon: Clock,
@@ -41,7 +41,7 @@ const Sobre: React.FC = () => {
     {
       icon: Shield,
       title: 'Garantia Total',
-      description: 'Todos os equipamentos com garantia e reposição imediata em caso de defeito ou problema técnico.'
+      description: 'Todos os equipamentos com garantia e reposição imediata em caso de defeitos ou problemas técnicos.'
     }
   ];
 
@@ -147,7 +147,7 @@ const Sobre: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-[var(--color-text)] mb-2">Segurança em primeiro lugar</h4>
                     <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-                      Garantimos a proteção de veículos, clientes e parceiros com máxima confiabilidade.
+                      Proteção de veículos, clientes e parceiros com máxima confiabilidade.
                     </p>
                   </div>
                 </div>
