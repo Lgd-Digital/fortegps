@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, Clock, MapPin, Headset, Banknote } from 'lucide-react';
+import { Phone, Mail, Clock, Headset, Banknote } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import MapComponent from '../components/MapComponent';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -145,33 +145,41 @@ const Contato: React.FC = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex flex-col h-full"
             >
-              
-              {/* <MapComponent /> */}
-              <MapComponent />
+              {/* Container único para mapa e contato direto */}
+              <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm overflow-hidden h-full">
+                {/* Mapa */}
+                <div className="p-6 pb-0">
+                  <h3 className="text-2xl font-bold text-[var(--color-text)] mb-6">
+                    Nossa Localização
+                  </h3>
+                  <MapComponent />
+                </div>
 
-              {/* Quick Contact */}
-              <div className="bg-[var(--color-bg-card)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm">
-                <h4 className="font-semibold text-[var(--color-text)] mb-4">
-                  Prefere falar diretamente?
-                </h4>
-                <div className="space-y-3">
-                  <a
-                    href="https://wa.me/5585998350842?text=Quero%20agendar%20uma%20visita"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-[var(--color-brand)] hover:text-[var(--color-brand)]/80 transition-colors"
-                  >
-                    <FaWhatsapp size={18} />
-                    <span className="font-medium">WhatsApp: (85) 99835-0842</span>
-                  </a>
-                  <a
-                    href="tel:+558508005812716"
-                    className="flex items-center space-x-2 text-[var(--color-text-muted)] hover:text-[var(--color-brand)] transition-colors"
-                  >
-                    <Phone size={18} />
-                    <span>Ligação: (85) 0800 581 2716</span>
-                  </a>
+                {/* Quick Contact */}
+                <div className="p-6 pt-4 border-t border-[var(--color-border)]">
+                  <h4 className="font-semibold text-[var(--color-text)] mb-4">
+                    Prefere falar diretamente?
+                  </h4>
+                  <div className="space-y-3">
+                    <a
+                      href="https://wa.me/5585998350842?text=Quero%20agendar%20uma%20visita"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-[var(--color-brand)] hover:text-[var(--color-brand)]/80 transition-colors"
+                    >
+                      <FaWhatsapp size={18} />
+                      <span className="font-medium">WhatsApp: (85) 99835-0842</span>
+                    </a>
+                    <a
+                      href="tel:+558508005812716"
+                      className="flex items-center space-x-2 text-[var(--color-text-muted)] hover:text-[var(--color-brand)] transition-colors"
+                    >
+                      <Phone size={18} />
+                      <span>Ligação: (85) 0800 581 2716</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
