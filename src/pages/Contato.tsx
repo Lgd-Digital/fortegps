@@ -173,11 +173,11 @@ const Contato: React.FC = () => {
                       <span className="font-medium">WhatsApp: (85) 99835-0842</span>
                     </a>
                     <a
-                      href="tel:+558508005812716"
+                      href="tel:08005812716"
                       className="flex items-center space-x-2 text-[var(--color-text-muted)] hover:text-[var(--color-brand)] transition-colors"
                     >
                       <Phone size={18} />
-                      <span>Ligação: (85) 0800 581 2716</span>
+                      <span>Ligação: 0800 581 2716</span>
                     </a>
                   </div>
                 </div>
