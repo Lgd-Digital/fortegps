@@ -25,7 +25,9 @@ import {
   BarChart,
   Gauge,
   Radio,
-  Settings
+  Settings,
+  MapPinned,
+  Drone
 } from 'lucide-react';
 import { Service } from '../data/services';
 
@@ -57,10 +59,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     Truck,
     Award,
     Navigation,
+    MapPinned,
     BarChart,
     Gauge,
     Radio,
     Settings,
+    Drone
   };
 
   const IconComponent = iconMap[service.icon] || Star;

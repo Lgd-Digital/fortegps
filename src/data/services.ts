@@ -44,11 +44,11 @@ export const services: Service[] = [
     icon: 'Shield'
   },
   {
-    slug: 'antifurto',
-    title: 'Antifurto',
-    short: 'Sistema completo de proteção contra furtos e roubos.',
-    bullets: ['Bloqueio automático', 'Sensores avançados'],
-    icon: 'Lock'
+    slug: 'estacione-seguro',
+    title: 'Estacione Seguro',
+    short: 'Sistema de identificação de movimento indevido.',
+    bullets: ['Notificação via App', 'Sensores avançados'],
+    icon: 'MapPinned'
   },
   {
     slug: 'busca-recuperacao',
@@ -90,7 +90,7 @@ export const services: Service[] = [
     title: 'Equipe equipada com Drone',
     short: 'Tecnologia de drones para localização aérea.',
     bullets: ['Visão aérea', 'Localização precisa'],
-    icon: 'Plane'
+    icon: 'Drone'
   },
   {
     slug: 'gestao-frotas',
