@@ -255,7 +255,7 @@ const Servicos: React.FC = () => {
                   icon: Truck,
                   title: 'REBOQUE',
                   subtitle: '(TOWING)',
-                  description: 'Até oficina ou concessionário em um raio máximo de 150 km de ida e volta.',
+                  description: 'Até oficina ou concessionário em um raio máximo de 200 km de ida e volta.',
                   color: 'from-red-500 to-red-600',
                   bgColor: 'bg-red-50',
                   iconColor: 'text-red-600'
@@ -264,7 +264,7 @@ const Servicos: React.FC = () => {
                   icon: Zap,
                   title: 'SOS ELÉTRICO',
                   subtitle: '(ELECTRICAL SOS)',
-                  description: 'Serviço de socorro elétrico com distância de até 100 km do prestador afiliado.',
+                  description: 'Serviço de socorro elétrico com distância de até 200 km do prestador afiliado.',
                   color: 'from-yellow-500 to-orange-500',
                   bgColor: 'bg-yellow-50',
                   iconColor: 'text-yellow-600'
@@ -273,7 +273,7 @@ const Servicos: React.FC = () => {
                   icon: Car,
                   title: 'TROCA DE PNEU',
                   subtitle: '(TIRE CHANGE)',
-                  description: 'Envio de um profissional para realizar a troca do pneu pelo estepe do veículo ou reboque até uma oficina. Limite de 100 km.',
+                  description: 'Envio de um profissional para realizar a troca do pneu pelo estepe do veículo ou reboque até uma oficina. Limite de 200 km.',
                   color: 'from-gray-600 to-gray-700',
                   bgColor: 'bg-gray-50',
                   iconColor: 'text-gray-600'
@@ -291,7 +291,7 @@ const Servicos: React.FC = () => {
                   icon: Key,
                   title: 'CHAVEIRO',
                   subtitle: '(LOCKSMITH)',
-                  description: 'Em casos em que o veículo não pode ser aberto e/ou acionado. Limite de até 100 km do profissional afiliado.',
+                  description: 'Em casos em que o veículo não pode ser aberto e/ou acionado. Limite de até 200 km do profissional afiliado.',
                   color: 'from-purple-600 to-purple-700',
                   bgColor: 'bg-purple-50',
                   iconColor: 'text-purple-600'
