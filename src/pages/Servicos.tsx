@@ -118,16 +118,18 @@ const Servicos: React.FC = () => {
                 className="relative z-20 mx-4"
               >
                 <div className="relative group">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-[var(--color-brand)]/20 via-[var(--color-brand)]/10 to-[var(--color-brand)]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className="absolute -inset-4 bg-gradient-to-r from-[var(--color-brand)]/20 via-[var(--color-brand)]/10 to-[var(--color-brand)]/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <img 
                     src="./veiculos.webp" 
-                    alt="Carro" 
-                    className="relative h-40 md:h-56 w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                    alt="veiculos" 
+                    className="relative h-52 md:h-96 w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </motion.div>
             </div>
           </motion.div>
+
+          { /* adicionar planos de moto / moto anual / carro / carro anual */ }
 
           {/* Features Grid */}
           {/* Features Grid */}
