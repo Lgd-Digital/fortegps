@@ -13,6 +13,7 @@ import {
 import ServiceCard from '../components/ServiceCard';
 import { services } from '../data/services';
 import MainCta from '../components/MainCta';
+import PlansCardCarsMotos from '../components/PlansCardCarsMotos';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Servicos: React.FC = () => {
@@ -108,7 +109,7 @@ const Servicos: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--color-brand)]/5 to-transparent rounded-3xl"></div>
             
             {/* Vehicles Container */}
-            <div className="relative flex items-center justify-center min-h-[300px] md:min-h-[400px] px-4 py-4">
+            <div className="relative flex items-center justify-center min-h-[400px] md:min-h-[600px] px-4 py-4">
               {/* Veiculos - Center (Destaque) */}
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -122,14 +123,14 @@ const Servicos: React.FC = () => {
                   <img 
                     src="./veiculos.webp" 
                     alt="veiculos" 
-                    className="relative h-52 md:h-96 w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                    className="relative h-72 md:h-[500px] lg:h-[600px] w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </motion.div>
             </div>
           </motion.div>
 
-          { /* adicionar planos de moto / moto anual / carro / carro anual */ }
+          <PlansCardCarsMotos />
 
           {/* Features Grid */}
           {/* Features Grid */}
