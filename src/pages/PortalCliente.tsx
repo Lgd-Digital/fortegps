@@ -1,17 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Smartphone, FileText, Phone, Mail, Clock } from 'lucide-react';
 import { FaWhatsapp, FaGooglePlay, FaApple } from 'react-icons/fa';
 import { FaBarcode } from 'react-icons/fa6';
 
+const appImages = [
+  '/app/tela-login.jpg',
+  '/app/tela-principal.jpg',
+  '/app/tela-navbar.jpg',
+  '/app/tela-detalhes-veiculo.jpg'
+];
+
 const PortalCliente: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5585999999999?text=Olá%2C%20preciso%20de%20ajuda%20com%20o%20portal%20do%20cliente";
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % appImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const whatsappUrl = "https://api.whatsapp.com/send/?phone=558532221684&text=Ol%C3%A1%2C+quero+saber+mais+sobre+rastreamento+de+ve%C3%ADculos&type=phone_number&app_absent=0";
 
   const address = "Rua José Hipólito, 550, Sala 41 - CEP: 60871170 - Messejana - Fortaleza/CE";
   const encodedAddress = encodeURIComponent(address);
-  
+
   const googleMapsEmbedUrl = `https://maps.google.com/maps?q=${encodedAddress}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
-  
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
@@ -28,7 +43,7 @@ const PortalCliente: React.FC = () => {
               Portal do <span className="text-[var(--color-brand)]">Cliente</span>
             </h1>
             <p className="text-lg text-[var(--color-text-muted)] max-w-3xl mx-auto">
-              Acesse todas as funcionalidades e serviços da ForteGPS em um só lugar. 
+              Acesse todas as funcionalidades e serviços da ForteGPS em um só lugar.
               Gerencie seu rastreamento, visualize relatórios e muito mais.
             </p>
           </motion.div>
@@ -49,7 +64,7 @@ const PortalCliente: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
                 A PROTEÇÃO DO SEU VEÍCULO A UM TOQUE DE DISTÂNCIA
               </h2>
-              
+
               <p className="text-lg text-[var(--color-text-muted)]">
                 Com o aplicativo da ForteGPS você tem diversas funcionalidades à sua disposição, como:
               </p>
@@ -81,7 +96,7 @@ const PortalCliente: React.FC = () => {
                 <h3 className="text-xl font-semibold text-[var(--color-text)]">
                   E você também pode contar com:
                 </h3>
-                
+
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
@@ -130,57 +145,29 @@ const PortalCliente: React.FC = () => {
                 {/* iPhone Frame */}
                 <div className="w-64 h-[500px] bg-black rounded-[2.5rem] p-2 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
-                    {/* Status Bar */}
-                    <div className="bg-[var(--color-brand)] text-white px-4 py-2 text-center text-sm font-semibold">
-                      FORTE GPS
-                    </div>
-                    
-                    {/* App Content */}
-                    <div className="p-4 space-y-4">
-                      {/* Logo */}
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-[var(--color-brand)] mb-2">FORTE GPS</div>
-                        <div className="text-xs text-gray-500">SEGUE A DICA #VAIDEFORTEGPS</div>
-                      </div>
-
-                      {/* Vehicle Icons */}
-                      <div className="flex justify-center space-x-8">
-                        <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
-                          <div className="w-8 h-4 bg-gray-400 rounded"></div>
-                        </div>
-                        <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
-                          <div className="w-6 h-8 bg-gray-400 rounded"></div>
-                        </div>
-                      </div>
-
-                      {/* Central Info */}
-                      <div className="bg-gray-100 rounded-lg p-3 text-center">
-                        <div className="text-xs text-gray-500 mb-1">Central 24h:</div>
-                        <div className="text-xs font-semibold text-gray-700">0800 606 8153</div>
-                        <div className="text-xs font-semibold text-gray-700">3484 6006</div>
-                        <div className="text-xs text-gray-500 mt-1">fortegps.com.br</div>
-                      </div>
-                    </div>
-
-                    {/* Bottom Navigation */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gray-100 p-2">
-                      <div className="flex justify-center">
-                        <div className="w-8 h-8 bg-[var(--color-brand)] rounded-full flex items-center justify-center">
-                          <div className="w-4 h-4 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
+                    <AnimatePresence>
+                      <motion.img
+                        key={currentImageIndex}
+                        src={appImages[currentImageIndex]}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        alt={`App Interface ${currentImageIndex + 1}`}
+                      />
+                    </AnimatePresence>
                   </div>
                 </div>
 
                 {/* Dots Indicator */}
                 <div className="flex justify-center space-x-2 mt-4">
-                  {[1, 2, 3, 4, 5].map((dot) => (
+                  {appImages.map((_, index) => (
                     <div
-                      key={dot}
-                      className={`w-2 h-2 rounded-full ${
-                        dot === 1 ? 'bg-[var(--color-brand)]' : 'bg-gray-500'
-                      }`}
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-colors duration-300 ${index === currentImageIndex ? 'bg-[var(--color-brand)]' : 'bg-gray-500'
+                        }`}
+                      style={{ backgroundColor: index === currentImageIndex ? 'var(--color-brand)' : '#6b7280' }}
                     ></div>
                   ))}
                 </div>
@@ -216,16 +203,16 @@ const PortalCliente: React.FC = () => {
               className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-8 flex items-center justify-center min-h-[400px] border border-[var(--color-border)] shadow-sm"
             >
               <iframe
-            src={googleMapsEmbedUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Localização da ForteGPS"
-            className="rounded-lg"
-          />
+                src={googleMapsEmbedUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da ForteGPS"
+                className="rounded-lg"
+              />
             </motion.div>
 
             {/* Addresses */}
@@ -238,18 +225,9 @@ const PortalCliente: React.FC = () => {
               <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">SEDE</h3>
                 <p className="text-[var(--color-text-muted)]">
-                  Rua José Hipólito, 550, Sala 40 - <br/>CEP: 60871170 - Messejana - Fortaleza/CE
+                  Rua José Hipólito, 550, Sala 40 - <br />CEP: 60871170 - Messejana - Fortaleza/CE
                 </p>
               </div>
-
-              {/* <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
-                <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">FILIAL</h3>
-                <p className="text-[var(--color-text-muted)]">
-                  Av. Gurgel do Amaral, N° 1037<br />
-                  Bairro Messejana<br />
-                  Fortaleza - CE
-                </p>
-              </div> */}
 
               <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">Contato</h3>
@@ -316,7 +294,7 @@ const PortalCliente: React.FC = () => {
               <p className="text-[var(--color-text-muted)] mb-6">
                 Clique no botão abaixo para acessar o portal do Banco do Brasil e gerar a segunda via do seu boleto
               </p>
-              
+
               <div className="space-y-4">
                 <motion.a
                   href="https://www63.bb.com.br/portalbb/boleto/boletos/hc21e,802,3322,10343.bbx?_ga=2.59242665.505440602.1598874158-303499835.1598874158&pk_vid=a6aba7f7a0b689061598874140f671d6"
@@ -406,7 +384,9 @@ const PortalCliente: React.FC = () => {
             className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6"
           >
             <motion.a
-              href="#"
+              href="https://play.google.com/store/apps/details?id=br.intertrack.itrackapp"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-brand)]/90 transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
@@ -419,7 +399,9 @@ const PortalCliente: React.FC = () => {
             </motion.a>
 
             <motion.a
-              href="#"
+              href="https://apps.apple.com/br/app/itrackapp/id1544143006"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-brand)]/90 transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
