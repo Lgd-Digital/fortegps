@@ -56,7 +56,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      
+
       {/* Features Section */}
       <section className="py-16 md:py-24">
         <div className="container">
@@ -70,11 +70,11 @@ const Home: React.FC = () => {
               Recursos que Fazem a Diferença
             </h2>
             <p className="text-lg text-[var(--color-text-muted)] max-w-3xl mx-auto">
-              Conheça as principais funcionalidades que tornam a ForteGPS a melhor escolha 
+              Conheça as principais funcionalidades que tornam a ForteGPS a melhor escolha
               para proteção do seu veículo
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <FeatureCard
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <StatsStrip />
+      {/* <StatsStrip /> */}
 
       {/* Why Choose Us Section */}
       <section className="py-16 md:py-24">
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
               Mais que tecnologia, oferecemos confiança e tranquilidade para você e sua família
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
               <FeatureCard
@@ -138,7 +138,7 @@ const Home: React.FC = () => {
               Soluções completas de rastreamento e monitoramento para todos os tipos de veículos
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {featuredServices.map((service, index) => (
               <ServiceCard
