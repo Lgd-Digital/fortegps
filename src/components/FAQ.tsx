@@ -39,9 +39,12 @@ const FAQ: React.FC = () => {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[var(--color-bg-section)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:ring-offset-[var(--color-bg-card)]"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between
+                  hover:bg-[var(--color-bg-section)]
+                  transition-colors
+                  focus:outline-none"
                   aria-expanded={openIndex === index}
-                >
+>
                   <span className="text-[var(--color-text)] font-medium pr-4">
                     {faq.question}
                   </span>

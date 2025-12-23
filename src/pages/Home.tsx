@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import FeatureCard from '../components/FeatureCard';
-import StatsStrip from '../components/StatsStrip';
 import ServiceCard from '../components/ServiceCard';
 import CTASection from '../components/CTASection';
 import FAQ from '../components/FAQ';
@@ -11,45 +10,52 @@ import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
   const features = [
-    {
-      icon: Shield,
-      title: 'Bloqueio Remoto',
-      description: 'Imobilize seu veículo instantaneamente através do app em caso de roubo ou situação de risco.'
-    },
-    {
-      icon: BellRing,
-      title: 'Alertas Inteligentes',
-      description: 'Receba notificações em tempo real sobre movimentação, velocidade e saída de perímetro.'
-    },
-    {
-      icon: MapPin,
-      title: 'Localização Precisa',
-      description: 'GPS de alta precisão que mostra a localização exata do seu veículo em tempo real.'
-    },
-    {
-      icon: Smartphone,
-      title: 'App Completo',
-      description: 'Aplicativo intuitivo para iOS e Android com todas as funcionalidades na palma da mão.'
-    }
-  ];
+  {
+    icon: Shield,
+    title: 'Bloqueio Remoto',
+    description:
+      'Bloqueie seu veículo instantaneamente através do aplicativo em caso de situação de risco, roubo ou como forma de prevenção.'
+  },
+  {
+    icon: BellRing,
+    title: 'Alertas Inteligentes',
+    description:
+      'Receba notificações em tempo real sobre movimentação, velocidade, saída de perímetro e ignição ligada ou desligada.'
+  },
+  {
+    icon: MapPin,
+    title: 'Localização Precisa',
+    description:
+      'GPS de alta precisão que mostra a localização exata do seu veículo em tempo real.'
+  },
+  {
+    icon: Smartphone,
+    title: 'App Completo',
+    description:
+      'Aplicativo intuitivo para iOS e Android com todas as funcionalidades na palma da sua mão.'
+  }
+];
 
   const whyChooseUs = [
-    {
-      icon: Users,
-      title: 'Atendimento Local',
-      description: 'Equipe cearense que entende suas necessidades e oferece suporte personalizado.'
-    },
-    {
-      icon: Shield,
-      title: 'Tecnologia Homologada',
-      description: 'Equipamentos certificados pela Anatel com garantia total de funcionamento.'
-    },
-    {
-      icon: Zap,
-      title: 'Instalação Rápida',
-      description: 'Processo ágil e profissional, sem danificar o veículo. Pronto em menos de 1 hora.'
-    }
-  ];
+  {
+    icon: Users,
+    title: 'Atendimento Humanizado',
+    description:
+      'Tratamos cada cliente com empatia, respeito e proximidade, oferecendo suporte ágil e soluções personalizadas que colocam pessoas em primeiro lugar.'
+  },
+  {
+    icon: Shield,
+    title: 'Tecnologia Certificada',
+    description:
+      'Equipamentos homologados pela Anatel e parceria com os principais fabricantes do segmento de rastreamento veicular.'
+  },
+  {
+    icon: Zap,
+    title: 'Suporte Imediato',
+    description:
+      'Central de atendimento 24 horas e setor técnico com uma equipe especializada pronta para ajudar em qualquer situação.'
+  }
+];
 
   const featuredServices = services.slice(0, 6);
 
@@ -99,13 +105,14 @@ const Home: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-4">
-              Por que escolher a ForteGPS?
-            </h2>
-            <p className="text-lg text-[var(--color-text-muted)] max-w-3xl mx-auto">
-              Mais que tecnologia, oferecemos confiança e tranquilidade para você e sua família
-            </p>
+    >
+      <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-4">
+        Por que escolher a ForteGPS?
+      </h2>
+      <p className="text-lg text-[var(--color-text-muted)] max-w-3xl mx-auto">
+        Mais que tecnologia, oferecemos atendimento humano, segurança e suporte imediato
+        para você ter tranquilidade todos os dias.
+      </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">

@@ -64,6 +64,7 @@ const Hero: React.FC = () => {
               </motion.a>
 
               <motion.button
+                onClick={() => window.open('https://api.whatsapp.com/send/?phone=558532221684&text=Ol%C3%A1%2C+quero+saber+mais+sobre+rastreamento+de+ve%C3%ADculos&type=phone_number&app_absent=0', '_blank')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center space-x-2 border-2 border-[var(--color-border)] text-[var(--color-text)] px-8 py-4 rounded-[var(--radius-button)] font-semibold text-lg hover:border-[var(--color-brand)] hover:text-[var(--color-brand)] transition-colors"
