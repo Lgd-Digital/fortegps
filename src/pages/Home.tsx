@@ -57,8 +57,19 @@ const Home: React.FC = () => {
   }
 ];
 
-  const featuredServices = services.slice(0, 6);
+  const featuredServiceSlugs = [
+    '0800-sinistros',
+    'aplicativo',
+    'alerta-veiculo-ligado',
+    'central-24x7',
+    'estacione-seguro',
+    'localizacao-tempo-real'
+  ];
 
+  const featuredServices = services.filter(service =>
+    featuredServiceSlugs.includes(service.slug)
+  );
+  
   return (
     <>
       <Hero />
@@ -142,7 +153,8 @@ const Home: React.FC = () => {
               Serviços em Destaque
             </h2>
             <p className="text-lg text-[var(--color-text-muted)] max-w-3xl mx-auto">
-              Soluções completas de rastreamento e monitoramento para todos os tipos de veículos
+              Conheça os principais serviços que garantem segurança, controle e
+              tranquilidade para o seu veículo.
             </p>
           </motion.div>
 
