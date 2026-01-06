@@ -1,27 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Smartphone, FileText, Phone, Mail, Clock } from 'lucide-react';
-import { FaWhatsapp, FaGooglePlay, FaApple } from 'react-icons/fa';
+import { FaGooglePlay, FaApple } from 'react-icons/fa';
 import { FaBarcode } from 'react-icons/fa6';
-
-const appImages = [
-  '/app/tela-login.jpg',
-  '/app/tela-principal.jpg',
-  '/app/tela-navbar.jpg',
-  '/app/tela-detalhes-veiculo.jpg'
-];
+import AppShowcase from '../components/AppShowcase';
 
 const PortalCliente: React.FC = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % appImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const whatsappUrl = "https://api.whatsapp.com/send/?phone=558532221684&text=Ol%C3%A1%2C+quero+saber+mais+sobre+rastreamento+de+ve%C3%ADculos&type=phone_number&app_absent=0";
 
   const address = "Rua José Hipólito, 550, Sala 41 - CEP: 60871170 - Messejana - Fortaleza/CE";
   const encodedAddress = encodeURIComponent(address);
@@ -50,132 +34,8 @@ const PortalCliente: React.FC = () => {
         </div>
       </section>
 
-      {/* App Section */}
-      <section className="py-16">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
-                A PROTEÇÃO DO SEU VEÍCULO A UM TOQUE DE DISTÂNCIA
-              </h2>
+      <AppShowcase />
 
-              <p className="text-lg text-[var(--color-text-muted)]">
-                Com o aplicativo da ForteGPS você tem diversas funcionalidades à sua disposição, como:
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-[var(--color-text-muted)]">Rastreamento em tempo real</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-[var(--color-text-muted)]">Alertas de velocidade</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-[var(--color-text-muted)]">Histórico de percurso</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-[var(--color-text-muted)]">Alerta de ignição ligada/desligada</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-[var(--color-text-muted)]">Bloqueio/desbloqueio</p>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-[var(--color-text)]">
-                  E você também pode contar com:
-                </h3>
-
-                <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-[var(--color-text-muted)]">Identificador de motorista</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-[var(--color-text-muted)]">Cerca Virtual</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-[var(--color-text-muted)]">Relatórios diversos</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[var(--color-brand)] rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-[var(--color-text-muted)]">Delimitar velocidade e acompanhar seu veículo, de sua família ou frota</p>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-[var(--color-text-muted)]">
-                Para ter acesso a essas e mais funções, fale com um de nossos consultores e conheça nossos planos.
-              </p>
-
-              <motion.a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 bg-[var(--color-brand)] text-white px-6 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-brand)]/90 transition-colors"
-              >
-                <FaWhatsapp size={20} />
-                <span>FALAR COM UM CONSULTOR</span>
-              </motion.a>
-            </motion.div>
-
-            {/* iPhone Mockup */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center"
-            >
-              <div className="relative">
-                {/* iPhone Frame */}
-                <div className="w-64 h-[500px] bg-black rounded-[2.5rem] p-2 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
-                    <AnimatePresence>
-                      <motion.img
-                        key={currentImageIndex}
-                        src={appImages[currentImageIndex]}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="absolute inset-0 w-full h-full object-cover"
-                        alt={`App Interface ${currentImageIndex + 1}`}
-                      />
-                    </AnimatePresence>
-                  </div>
-                </div>
-
-                {/* Dots Indicator */}
-                <div className="flex justify-center space-x-2 mt-4">
-                  {appImages.map((_, index) => (
-                    <div
-                      key={index}
-                      className={`w-2 h-2 rounded-full transition-colors duration-300 ${index === currentImageIndex ? 'bg-[var(--color-brand)]' : 'bg-gray-500'
-                        }`}
-                      style={{ backgroundColor: index === currentImageIndex ? 'var(--color-brand)' : '#6b7280' }}
-                    ></div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Location Section */}
       <section className="py-16 md:py-24 bg-[var(--color-bg-section)]">
