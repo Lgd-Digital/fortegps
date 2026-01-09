@@ -2,8 +2,28 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Smartphone, ArrowRight } from 'lucide-react';
 import { AppMockup } from './AppShowcase';
+import StatsGrid from './StatsGrid';
 
 const Hero: React.FC = () => {
+  const stats = [
+    {
+      value: '+10.000',
+      label: 'Veículos Protegidos'
+    },
+    {
+      value: '98%',
+      label: 'Satisfação'
+    },
+    {
+      value: '< 2min',
+      label: 'Tempo de Resposta'
+    },
+    {
+      value: '14+ anos',
+      label: 'de Experiência'
+    }
+  ];
+
   return (
     <section className="relative py-32 md:py-56 overflow-hidden">
       {/* Background Pattern */}
@@ -100,6 +120,11 @@ const Hero: React.FC = () => {
 
           <AppMockup />
         </div>
+      </div>
+
+      {/* Stats Grid - Fora do container para alinhar com o menu */}
+      <div className="mt-16">
+        <StatsGrid stats={stats} animationDelay={0.7} isHero={true} />
       </div>
 
     </section>

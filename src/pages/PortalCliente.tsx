@@ -85,7 +85,7 @@ const PortalCliente: React.FC = () => {
               <div className="bg-[var(--color-bg-card)] rounded-[var(--radius-card)] p-6 border border-[var(--color-border)] shadow-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-brand)] mb-4">SEDE</h3>
                 <p className="text-[var(--color-text-muted)]">
-                  Rua José Hipólito, 550, Sala 40 - <br />CEP: 60871170 - Messejana - Fortaleza/CE
+                  Rua José Hipólito, 550, Sala 41 - <br />CEP: 60871170 - Messejana - Fortaleza/CE
                 </p>
               </div>
 

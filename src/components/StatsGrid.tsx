@@ -10,12 +10,14 @@ interface StatsGridProps {
   stats: StatItem[];
   className?: string;
   animationDelay?: number;
+  isHero?: boolean;
 }
 
 const StatsGrid: React.FC<StatsGridProps> = ({ 
   stats, 
   className = '', 
-  animationDelay = 0.5 
+  animationDelay = 0.5,
+  isHero = false
 }) => {
   return (
     <motion.div
@@ -23,7 +25,7 @@ const StatsGrid: React.FC<StatsGridProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: animationDelay }}
-      className={`text-center ${className}`}
+      className={`text-center ${isHero ? 'container' : ''} ${className}`}
     >
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((stat, index) => (
