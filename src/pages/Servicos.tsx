@@ -15,8 +15,10 @@ import { services } from '../data/services';
 import MainCta from '../components/MainCta';
 import PlansCardCarsMotos from '../components/PlansCardCarsMotos';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Servicos: React.FC = () => {
+  const { theme } = useTheme();
   return (
     <div className="py-20">
       {/* Hero Section */}
@@ -119,11 +121,19 @@ const Servicos: React.FC = () => {
                 className="relative z-20 mx-4"
               >
                 <div className="relative group">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-[var(--color-brand)]/20 via-[var(--color-brand)]/10 to-[var(--color-brand)]/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className={`absolute -inset-4 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 ${
+                    theme === 'light' 
+                      ? 'bg-gradient-to-r from-gray-800/15 via-gray-700/10 to-gray-800/15 shadow-[0_0_30px_rgba(0,0,0,0.15)]' 
+                      : 'bg-gradient-to-r from-[var(--color-brand)]/20 via-[var(--color-brand)]/10 to-[var(--color-brand)]/20'
+                  }`}></div>
                   <img 
                     src="./veiculos.webp" 
                     alt="veiculos" 
-                    className="relative h-72 md:h-[500px] lg:h-[600px] w-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                    className={`relative h-72 md:h-[500px] lg:h-[600px] w-auto object-contain group-hover:scale-105 transition-transform duration-500 ${
+                      theme === 'light' 
+                        ? 'drop-shadow-[0_15px_35px_rgba(0,0,0,0.25)]' 
+                        : 'drop-shadow-2xl'
+                    }`}
                   />
                 </div>
               </motion.div>
