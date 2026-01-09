@@ -101,6 +101,7 @@ const Hero: React.FC = () => {
           <AppMockup />
         </div>
       </div>
+
     </section>
   );
 };

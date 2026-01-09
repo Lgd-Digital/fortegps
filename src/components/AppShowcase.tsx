@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useTheme } from '../contexts/ThemeContext';
 
 const appImages = [
   '/app/tela-login.jpg',
@@ -13,6 +14,7 @@ const whatsappUrl = "https://api.whatsapp.com/send/?phone=558532221684&text=Ol%C
 
 export const AppMockup: React.FC = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const { theme } = useTheme();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -20,6 +22,9 @@ export const AppMockup: React.FC = () => {
         }, 3000);
         return () => clearInterval(interval);
     }, []);
+
+    const borderColor = theme === 'light' ? 'border-gray-300' : 'border-gray-800';
+    const bgColor = theme === 'light' ? 'bg-gray-200' : 'bg-black';
 
     return (
         <motion.div
@@ -30,7 +35,7 @@ export const AppMockup: React.FC = () => {
         >
             <div className="relative">
                 {/* iPhone Frame */}
-                <div className="w-64 h-[500px] bg-black rounded-[2.5rem] p-2 shadow-2xl border-4 border-gray-800">
+                <div className={`w-64 h-[500px] ${bgColor} rounded-[2.5rem] p-2 shadow-2xl border-4 ${borderColor} transition-colors duration-300`}>
                     <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
                         <AnimatePresence mode="wait">
                             <motion.img
