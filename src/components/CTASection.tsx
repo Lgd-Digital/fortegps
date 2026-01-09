@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Clock, Users, CheckCircle, Star } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
+import { Shield, Clock, Users, Star } from 'lucide-react';
 import MainCta from './MainCta';
+import StatsGrid from './StatsGrid';
 
 const CTASection: React.FC = () => {
   const benefits = [
@@ -35,6 +35,25 @@ const CTASection: React.FC = () => {
       role: 'Proprietária de Veículo',
       text: 'Finalmente posso dormir tranquila sabendo que meu carro está protegido.',
       rating: 5
+    }
+  ];
+
+  const stats = [
+    {
+      value: '+10.000',
+      label: 'Veículos Protegidos'
+    },
+    {
+      value: '98%',
+      label: 'Satisfação'
+    },
+    {
+      value: '< 2min',
+      label: 'Tempo de Resposta'
+    },
+    {
+      value: '14+ anos',
+      label: 'de Experiência'
     }
   ];
 
@@ -152,48 +171,7 @@ const CTASection: React.FC = () => {
         <MainCta />
 
         {/* Bottom Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-16"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-[var(--color-brand)] mb-2">
-                +10.000
-              </div>
-              <div className="text-sm text-[var(--color-text-muted)]">
-                Veículos Protegidos
-              </div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-[var(--color-brand)] mb-2">
-                98%
-              </div>
-              <div className="text-sm text-[var(--color-text-muted)]">
-                Satisfação
-              </div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-[var(--color-brand)] mb-2">
-                &lt; 2min
-              </div>
-              <div className="text-sm text-[var(--color-text-muted)]">
-                Tempo de Resposta
-              </div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-[var(--color-brand)] mb-2">
-                14+ anos
-              </div>
-              <div className="text-sm text-[var(--color-text-muted)]">
-                de Experiência
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        <StatsGrid stats={stats} className="mt-16" />
       </div>
     </section>
   );
