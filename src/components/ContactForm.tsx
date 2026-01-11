@@ -28,8 +28,12 @@ const ContactForm: React.FC = () => {
   };
 
   const handleWhatsApp = () => {
+    if (!formData.name || !formData.phone || !formData.vehicleType) {
+      alert('Por favor, preencha todos os campos obrigatórios (*) antes de enviar pelo WhatsApp.');
+      return;
+    }
     const message = `Olá! Me chamo ${formData.name}. Tenho um ${formData.vehicleType} e gostaria de saber mais sobre rastreamento. ${formData.message}`;
-    const whatsappUrl = `https://wa.me/5585999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/558532221684?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
