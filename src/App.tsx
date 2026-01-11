@@ -8,6 +8,7 @@ import Servicos from './pages/Servicos';
 import Contato from './pages/Contato';
 import PortalCliente from './pages/PortalCliente';
 import PoliticaPrivacidade from './pages/PoliticaPrivacidade';
+import TermosUso from './pages/TermosUso';
 import { ThemeProvider } from './contexts/ThemeContext';
 import ScrollToTopWrapper from './components/ScrollToTopWrapper';
 
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/portal-cliente" element={<PortalCliente />} />
                 <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
+                <Route path="/termos-uso" element={<TermosUso />} />
               </Routes>
             </main>
             <Footer />
