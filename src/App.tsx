@@ -7,6 +7,7 @@ import Sobre from './pages/Sobre';
 import Servicos from './pages/Servicos';
 import Contato from './pages/Contato';
 import PortalCliente from './pages/PortalCliente';
+import PoliticaPrivacidade from './pages/PoliticaPrivacidade';
 import { ThemeProvider } from './contexts/ThemeContext';
 import ScrollToTopWrapper from './components/ScrollToTopWrapper';
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/servicos" element={<Servicos />} />
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/portal-cliente" element={<PortalCliente />} />
+                <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
               </Routes>
             </main>
             <Footer />

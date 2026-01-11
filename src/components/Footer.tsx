@@ -84,9 +84,9 @@ const Footer: React.FC = () => {
               © 2025 ForteGPS. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-[var(--color-text-beige)] hover:text-[var(--color-brand)] transition-colors">
+              <Link to="/politica-privacidade" className="text-[var(--color-text-beige)] hover:text-[var(--color-brand)] transition-colors">
                 Política de Privacidade
-              </a>
+              </Link>
               <a href="#" className="text-[var(--color-text-beige)] hover:text-[var(--color-brand)] transition-colors">
                 Termos de Uso
               </a>

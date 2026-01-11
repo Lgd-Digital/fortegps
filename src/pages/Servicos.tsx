@@ -65,7 +65,7 @@ const Servicos: React.FC = () => {
           className="flex flex-col sm:flex-row gap-6 mt-12 justify-center items-center"
         >
           <motion.a
-            href="https://wa.me/5585999999999?text=Quero%20montar%20um%20plano%20personalizado%20para%20meu%20veículo"
+            href="https://wa.me/558532221684"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, y: -2 }}
@@ -360,7 +360,7 @@ const Servicos: React.FC = () => {
               className="text-center"
             >
               <motion.a
-                href="https://wa.me/5585999999999?text=Quero%20contratar%20o%20serviço%20de%20Assistência%20Veicular%2024h"
+                href="https://wa.me/558532221684"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}

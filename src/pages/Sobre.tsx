@@ -250,7 +250,7 @@ const Sobre: React.FC = () => {
                 
                 {/* Connection Line */}
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-[var(--color-border)] -translate-x-8"></div>
+                  <div className="hidden md:block absolute top-8 left-1/2 w-[calc(100%-32px)] h-0.5 bg-[var(--color-border)] ml-8"></div>
                 )}
               </motion.div>
             ))}
