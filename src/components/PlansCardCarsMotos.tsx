@@ -115,7 +115,7 @@ const plans: Plan[] = [
 
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-12 md:py-16 scroll-mt-32" id="plans">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

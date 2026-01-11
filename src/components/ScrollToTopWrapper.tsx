@@ -6,16 +6,22 @@ interface ScrollToTopWrapperProps {
 }
 
 const ScrollToTopWrapper: React.FC<ScrollToTopWrapperProps> = ({ children }) => {
-  const location = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // Scroll para o topo da página sempre que a rota mudar
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }, [location.pathname]);
+    if (!hash) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [pathname, hash]);
 
   return <>{children}</>;
 };

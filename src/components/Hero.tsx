@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Smartphone, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { AppMockup } from './AppShowcase';
 import StatsGrid from './StatsGrid';
+
+const MotionLink = motion(Link);
 
 const Hero: React.FC = () => {
   const stats = [
@@ -25,7 +28,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-32 md:py-56 overflow-hidden">
+    <section className="relative pt-32 pb-8 md:pt-56 md:pb-12 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brand)]/5 via-transparent to-[var(--color-brand)]/5"></div>
       
@@ -75,25 +78,25 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <motion.a
-                href="/servicos"
+              <MotionLink
+                to="/servicos#plans"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center space-x-2 bg-[var(--color-brand)] text-white px-8 py-4 rounded-[var(--radius-button)] font-semibold text-lg hover:bg-[var(--color-brand)]/90 transition-colors shadow-lg"
               >
                 <span>Conheça nossos planos</span>
                 <ArrowRight size={20} />
-              </motion.a>
+              </MotionLink>
 
-              <motion.button
-                onClick={() => window.open('https://api.whatsapp.com/send/?phone=558532221684&text=Ol%C3%A1%2C+quero+saber+mais+sobre+rastreamento+de+ve%C3%ADculos&type=phone_number&app_absent=0', '_blank')}
+              <MotionLink
+                to="/contato"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center space-x-2 border-2 border-[var(--color-border)] text-[var(--color-text)] px-8 py-4 rounded-[var(--radius-button)] font-semibold text-lg hover:border-[var(--color-brand)] hover:text-[var(--color-brand)] transition-colors"
               >
                 <Smartphone size={20} />
                 <span>Contatos</span>
-              </motion.button>
+              </MotionLink>
             </motion.div>
 
             {/* Trust Indicators */}
@@ -123,7 +126,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Stats Grid - Fora do container para alinhar com o menu */}
-      <div className="mt-16">
+      <div className="mt-12">
         <StatsGrid stats={stats} animationDelay={0.7} isHero={true} />
       </div>
 

@@ -20,7 +20,7 @@ const Header: React.FC = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const whatsappUrl = "https://wa.me/5585998350842?text=Olá%2C%20quero%20saber%20mais%20sobre%20rastreamento%20de%20veículos";
+  const whatsappUrl = "https://wa.me/558594038884";
 
   return (
     <>
