@@ -182,7 +182,7 @@ const Home: React.FC = () => {
       </section>
 
       <FAQ />
-      <CTASection />
+      <CTASection isHomePage />
     </>
   );
 };

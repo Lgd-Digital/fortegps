@@ -4,7 +4,7 @@ import { Shield, Clock, Users, Star } from 'lucide-react';
 import MainCta from './MainCta';
 import StatsGrid from './StatsGrid';
 
-const CTASection: React.FC = () => {
+const CTASection: React.FC<{ isHomePage?: boolean }> = ({ isHomePage = false }) => {
   const benefits = [
     {
       icon: Shield,
@@ -171,7 +171,9 @@ const CTASection: React.FC = () => {
         <MainCta />
 
         {/* Bottom Stats */}
-        <StatsGrid stats={stats} className="mt-16" />
+        {!isHomePage && (
+          <StatsGrid stats={stats} className="mt-16" />
+        )}
       </div>
     </section>
   );

@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 Serviços
               </Link>
               <Link to="/contato" className="block text-sm text-[var(--color-text-beige)] hover:text-[var(--color-brand)] transition-colors">
-                Contato
+                Contatos
               </Link>
             </nav>
           </div>

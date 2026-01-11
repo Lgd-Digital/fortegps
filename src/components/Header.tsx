@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon, ShieldAlert } from 'lucide-react';
+import { Menu, X, Sun, Moon, ShieldAlert, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
     { label: 'Sobre', path: '/sobre' },
     { label: 'Serviços', path: '/servicos' },
     { label: 'Portal do Cliente', path: '/portal-cliente' },
-    { label: 'Contato', path: '/contato' }
+    { label: 'Contatos', path: '/contato' }
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -78,16 +78,25 @@ const Header: React.FC = () => {
                  >
                    {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
                  </button>
-                 <a
-                   href={whatsappUrl}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-[var(--color-brand)] text-white px-4 py-2 rounded-[var(--radius-button)] font-medium hover:scale-105 hover:bg-[var(--color-brand)] transition-colors"
-                 >
+                  <a
+                    href="https://www17.itrack.com.br/cfortegps/controlemonitoramento"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 border-2 border-[var(--color-brand)] text-[var(--color-brand)] px-4 py-2 rounded-[var(--radius-button)] font-medium hover:bg-[var(--color-brand)] hover:text-white transition-all duration-300"
+                  >
+                    <MapPin size={20} />
+                    <span>Rastreie seu veículo</span>
+                  </a>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 bg-[var(--color-brand)] text-white px-4 py-2 rounded-[var(--radius-button)] font-medium hover:scale-105 hover:bg-[var(--color-brand)] transition-colors shadow-md"
+                  >
                     <ShieldAlert size={20} />
-                   <span>Central de Monitoramento</span>
-                 </a>
-               </div>
+                    <span>Central de Monitoramento</span>
+                  </a>
+                </div>
 
               {/* Mobile Menu Button */}
               <button
@@ -142,9 +151,19 @@ const Header: React.FC = () => {
                        className="flex items-center space-x-2 bg-[var(--color-brand)] text-white px-4 py-3 rounded-[var(--radius-button)] font-medium w-full justify-center"
                      >
                        <FaWhatsapp size={16} />
-                       <span>Falar no WhatsApp</span>
-                     </a>
-                   </div>
+                        <span>Falar no WhatsApp</span>
+                      </a>
+                      <a
+                        href="https://www17.itrack.com.br/cfortegps/controlemonitoramento"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex items-center justify-center space-x-2 border-2 border-[var(--color-brand)] text-[var(--color-brand)] px-4 py-3 rounded-[var(--radius-button)] font-medium w-full"
+                      >
+                        <MapPin size={16} />
+                        <span>Rastreie seu veículo</span>
+                      </a>
+                    </div>
                 </nav>
               </motion.div>
             )}

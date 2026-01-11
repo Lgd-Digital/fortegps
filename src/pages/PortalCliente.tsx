@@ -124,7 +124,7 @@ const PortalCliente: React.FC = () => {
       </section>
 
       {/* Billing Section */}
-      <section className="py-16 md:py-24">
+      {/* <section className="py-16 md:py-24">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -170,7 +170,7 @@ const PortalCliente: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Payment Information Section */}
       <section className="py-16 md:py-24 bg-[var(--color-bg-section)]">
@@ -251,7 +251,7 @@ const PortalCliente: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-brand)]/90 transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
             >
-              <FaGooglePlay size={24} />
+              <FaGooglePlay size={24} color="var(--color-brand)" />
               <div className="text-left">
                 <div className="text-xs text-[var(--color-text-muted)]">Disponível no</div>
                 <div className="text-sm font-semibold">Google Play</div>
@@ -266,7 +266,7 @@ const PortalCliente: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-3 bg-[var(--color-bg-card)] text-[var(--color-text)] px-6 py-3 rounded-[var(--radius-button)] hover:bg-[var(--color-brand)]/90 transition-colors border border-[var(--color-border)] shadow-sm hover:shadow-card"
             >
-              <FaApple size={24} />
+              <FaApple size={24} color="var(--color-brand)"/>
               <div className="text-left">
                 <div className="text-xs text-[var(--color-text-muted)]">Disponível na</div>
                 <div className="text-sm font-semibold">App Store</div>

@@ -22,7 +22,9 @@ export default function MainCta() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
           <motion.a
-            href="/contato"
+            href="https://wa.me/558532221684"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center space-x-2 bg-[var(--color-brand)] text-white px-8 py-4 rounded-[var(--radius-button)] font-semibold text-lg hover:bg-[var(--color-brand)]/90 transition-colors shadow-lg"
