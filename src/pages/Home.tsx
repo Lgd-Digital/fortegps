@@ -7,6 +7,9 @@ import FAQ from '../components/FAQ';
 import { Shield, BellRing, MapPin, Smartphone, Users, Zap } from 'lucide-react';
 import { services } from '../data/services';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+const MotionLink = motion(Link);
 
 const Home: React.FC = () => {
   const features = [
@@ -169,14 +172,14 @@ const Home: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <motion.a
-              href="/servicos"
+            <MotionLink
+              to="/servicos"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center space-x-2 border-2 border-[var(--color-brand)] text-[var(--color-brand)] px-6 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-brand)] hover:text-white transition-colors"
             >
               <span>Ver Todos os Serviços</span>
-            </motion.a>
+            </MotionLink>
           </div>
         </div>
       </section>

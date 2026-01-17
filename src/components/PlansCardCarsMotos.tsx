@@ -112,8 +112,6 @@ const plans: Plan[] = [
   },
 ];
 
-
-
   return (
     <section className="py-12 md:py-16 scroll-mt-32" id="plans">
       <div className="container">
