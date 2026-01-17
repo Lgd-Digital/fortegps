@@ -1,9 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, FileText } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const PoliticaPrivacidade: React.FC = () => {
   return (
+    <>
+      <SEO
+        title="Política de Privacidade - ForteGPS"
+        description="Política de privacidade da ForteGPS. Saiba como protegemos seus dados pessoais e informações de rastreamento. Conformidade com LGPD."
+        keywords="política privacidade, lgpd, proteção dados, privacidade fortegps"
+        url="https://fortegps.com.br/politica-privacidade"
+        image="/logo-total.png"
+        canonical="https://fortegps.com.br/politica-privacidade"
+        noindex={false}
+      />
     <div className="pt-32 pb-20">
       <div className="container max-w-4xl">
         {/* Header */}
@@ -124,6 +135,7 @@ const PoliticaPrivacidade: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

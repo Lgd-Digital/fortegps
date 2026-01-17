@@ -4,10 +4,12 @@ import FeatureCard from '../components/FeatureCard';
 import ServiceCard from '../components/ServiceCard';
 import CTASection from '../components/CTASection';
 import FAQ from '../components/FAQ';
+import SEO from '../components/SEO';
 import { Shield, BellRing, MapPin, Smartphone, Users, Zap } from 'lucide-react';
 import { services } from '../data/services';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { getOrganizationSchema, getServiceSchema, getFAQSchema, getWebSiteSchema } from '../utils/seoData';
 
 const MotionLink = motion(Link);
 
@@ -73,8 +75,27 @@ const Home: React.FC = () => {
     featuredServiceSlugs.includes(service.slug)
   );
   
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      getOrganizationSchema(),
+      getServiceSchema(),
+      getFAQSchema(),
+      getWebSiteSchema()
+    ]
+  };
+
   return (
     <>
+      <SEO
+        title="ForteGPS - Rastreamento de Veículos | Proteção 24h"
+        description="ForteGPS - Rastreamento de veículos com tecnologia avançada, bloqueio remoto, alertas em tempo real e suporte 24h. Proteção completa para seu carro ou moto em Fortaleza, CE."
+        keywords="rastreamento veicular, gps veicular, rastreador, bloqueio remoto, monitoramento veicular, fortaleza, ceará, segurança veicular, rastreamento de carros, rastreamento de motos"
+        url="https://fortegps.com.br"
+        image="/logo-total.png"
+        structuredData={structuredData}
+        canonical="https://fortegps.com.br"
+      />
       <Hero />
 
       {/* Features Section */}

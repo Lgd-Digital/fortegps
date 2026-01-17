@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fortegps.com.br/sitemap.xml
+
+# Desabilitar rastreamento de arquivos desnecessários
+Disallow: /api/
+Disallow: /admin/
+Disallow: /portal-cliente/
+
+# Permitir rastreamento de recursos importantes
+Allow: /public/
+Allow: /src/
+
+# Crawl-delay (opcional, ajuda a não sobrecarregar o servidor)
+Crawl-delay: 1

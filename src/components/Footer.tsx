@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           {/* Logo e Descrição */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center">
-              <img src="/logo.png" alt="ForteGPS" className="w-auto h-16 mb-4" />
+              <img src="/logo.png" alt="ForteGPS - Rastreamento de Veículos" className="w-auto h-16 mb-4" />
             </Link>
             <p className="text-[var(--color-text-beige)] text-sm leading-relaxed">
               Para quem não tem seguro, mas não abre mão da segurança.

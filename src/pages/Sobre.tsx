@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Users, Award, Clock } from 'lucide-react';
 import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
+import { getLocalBusinessSchema, getBreadcrumbSchema } from '../utils/seoData';
 
 const Sobre: React.FC = () => {
   const steps = [
@@ -45,7 +47,28 @@ const Sobre: React.FC = () => {
     }
   ];
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      getLocalBusinessSchema(),
+      getBreadcrumbSchema([
+        { name: 'Home', url: 'https://fortegps.com.br' },
+        { name: 'Sobre', url: 'https://fortegps.com.br/sobre' }
+      ])
+    ]
+  };
+
   return (
+    <>
+      <SEO
+        title="Sobre a ForteGPS - Empresa de Rastreamento Veicular em Fortaleza"
+        description="Conheça a ForteGPS: empresa cearense especializada em rastreamento veicular com mais de 14 anos de experiência. Tecnologia certificada, atendimento humanizado e suporte 24h."
+        keywords="sobre fortegps, empresa rastreamento, rastreamento fortaleza, empresa cearense, tecnologia rastreamento, anatel certificado"
+        url="https://fortegps.com.br/sobre"
+        image="/logo-total.png"
+        structuredData={structuredData}
+        canonical="https://fortegps.com.br/sobre"
+      />
     <div className="pt-20">
       {/* Hero Section */}
       <section className="py-16 md:py-24">
@@ -301,6 +324,7 @@ const Sobre: React.FC = () => {
 
       <CTASection />
     </div>
+    </>
   );
 };
 

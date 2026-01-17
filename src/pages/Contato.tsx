@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, Clock, Headset, Banknote } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import MapComponent from '../components/MapComponent';
+import SEO from '../components/SEO';
 import { FaWhatsapp } from 'react-icons/fa';
+import { getBreadcrumbSchema } from '../utils/seoData';
 
 const Contato: React.FC = () => {
   const contactInfo = [
@@ -39,7 +41,33 @@ const Contato: React.FC = () => {
     }
   ];
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ContactPage',
+        '@id': 'https://fortegps.com.br/contato',
+        name: 'Contato - ForteGPS',
+        description: 'Entre em contato com a ForteGPS para informações sobre rastreamento veicular'
+      },
+      getBreadcrumbSchema([
+        { name: 'Home', url: 'https://fortegps.com.br' },
+        { name: 'Contato', url: 'https://fortegps.com.br/contato' }
+      ])
+    ]
+  };
+
   return (
+    <>
+      <SEO
+        title="Contato - ForteGPS | Fale Conosco"
+        description="Entre em contato com a ForteGPS. Atendimento 24h, suporte técnico, financeiro e comercial. WhatsApp, telefone e e-mail. Fortaleza, CE."
+        keywords="contato fortegps, atendimento rastreamento, suporte técnico, telefone fortegps, whatsapp rastreamento"
+        url="https://fortegps.com.br/contato"
+        image="/logo-total.png"
+        structuredData={structuredData}
+        canonical="https://fortegps.com.br/contato"
+      />
     <div className="pt-20">
       {/* Hero Section */}
       <section className="py-16 md:py-24">
@@ -187,6 +215,7 @@ const Contato: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

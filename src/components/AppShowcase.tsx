@@ -46,7 +46,7 @@ export const AppMockup: React.FC = () => {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.5 }}
                                 className="absolute inset-0 w-full h-full object-cover"
-                                alt={`App Interface ${currentImageIndex + 1}`}
+                                alt={`Aplicativo ForteGPS - ${currentImageIndex === 0 ? 'Tela de login' : currentImageIndex === 1 ? 'Tela principal com rastreamento' : currentImageIndex === 2 ? 'Menu de navegação' : 'Detalhes do veículo rastreado'}`}
                             />
                         </AnimatePresence>
                     </div>

@@ -14,12 +14,36 @@ import ServiceCard from '../components/ServiceCard';
 import { services } from '../data/services';
 import MainCta from '../components/MainCta';
 import PlansCardCarsMotos from '../components/PlansCardCarsMotos';
+import SEO from '../components/SEO';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoData';
 
 const Servicos: React.FC = () => {
   const { theme } = useTheme();
+  
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      getServiceSchema(),
+      getBreadcrumbSchema([
+        { name: 'Home', url: 'https://fortegps.com.br' },
+        { name: 'Serviços', url: 'https://fortegps.com.br/servicos' }
+      ])
+    ]
+  };
+
   return (
+    <>
+      <SEO
+        title="Serviços de Rastreamento Veicular - ForteGPS"
+        description="Conheça todos os nossos serviços de rastreamento veicular: bloqueio remoto, monitoramento 24h, cerca virtual, gestão de frotas e muito mais. Tecnologia avançada para proteger seu veículo."
+        keywords="serviços rastreamento, bloqueio remoto, monitoramento veicular, cerca virtual, gestão de frotas, assistência 24h, rastreamento GPS, Fortaleza"
+        url="https://fortegps.com.br/servicos"
+        image="/logo-total.png"
+        structuredData={structuredData}
+        canonical="https://fortegps.com.br/servicos"
+      />
     <div className="py-20">
       {/* Hero Section */}
       <section className="py-16 md:py-24">
@@ -128,7 +152,7 @@ const Servicos: React.FC = () => {
                   }`}></div>
                   <img 
                     src="./veiculos.webp" 
-                    alt="veiculos" 
+                    alt="Veículos protegidos pela ForteGPS - carros, motos e caminhões com rastreamento GPS" 
                     className={`relative h-72 md:h-[500px] lg:h-[600px] w-auto object-contain group-hover:scale-105 transition-transform duration-500 ${
                       theme === 'light' 
                         ? 'drop-shadow-[0_15px_35px_rgba(0,0,0,0.25)]' 
@@ -379,6 +403,7 @@ const Servicos: React.FC = () => {
         <MainCta />
       </div>
     </div>
+    </>
   );
 };
 

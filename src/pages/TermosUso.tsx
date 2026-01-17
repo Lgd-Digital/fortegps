@@ -1,9 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Shield, Info, AlertTriangle, Scale } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const TermosUso: React.FC = () => {
   return (
+    <>
+      <SEO
+        title="Termos de Uso - ForteGPS"
+        description="Termos de uso dos serviços da ForteGPS. Leia as condições de uso da plataforma de rastreamento veicular e aplicativo."
+        keywords="termos uso, condições uso, termos serviço, fortegps termos"
+        url="https://fortegps.com.br/termos-uso"
+        image="/logo-total.png"
+        canonical="https://fortegps.com.br/termos-uso"
+        noindex={false}
+      />
     <div className="pt-32 pb-20">
       <div className="container max-w-4xl">
         {/* Header */}
@@ -145,6 +156,7 @@ const TermosUso: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
