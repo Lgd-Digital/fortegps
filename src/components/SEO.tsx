@@ -15,7 +15,7 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'ForteGPS - Rastreamento de Veículos | Proteção 24h',
+  title = 'ForteGPS - Rastreamento de Veículos 24h',
   description = 'ForteGPS - Rastreamento de veículos com tecnologia avançada, bloqueio remoto, alertas em tempo real e suporte 24h. Proteção completa para seu carro ou moto em Fortaleza, CE.',
   keywords = 'rastreamento, gps, veículos, bloqueio remoto, monitoramento, fortaleza, ceará, rastreamento veicular, gps veicular, rastreador, segurança veicular',
   image = 'https://fortegps.com.br/logo-total.png',
